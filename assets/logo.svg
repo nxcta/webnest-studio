@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <!-- Hexagon nest shape -->
+  <polygon points="24,4 42,14 42,34 24,44 6,34 6,14" fill="#4F8EF7" opacity="0.15" stroke="#4F8EF7" stroke-width="2"/>
+  <!-- Inner web lines -->
+  <line x1="24" y1="4" x2="24" y2="44" stroke="#4F8EF7" stroke-width="1.2" opacity="0.5"/>
+  <line x1="6" y1="14" x2="42" y2="34" stroke="#4F8EF7" stroke-width="1.2" opacity="0.5"/>
+  <line x1="42" y1="14" x2="6" y2="34" stroke="#4F8EF7" stroke-width="1.2" opacity="0.5"/>
+  <!-- Center bracket symbol -->
+  <path d="M18 17 L13 24 L18 31" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M30 17 L35 24 L30 31" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="21" y1="28" x2="27" y2="20" stroke="#4F8EF7" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

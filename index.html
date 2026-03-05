@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WebNest Studio — Professional web design services based in Valencia City, Bukidnon. We build clean, modern websites for businesses of all sizes." />
+  <title>WebNest Studio | Web Design & Development</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ NAVBAR ════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <img src="assets/logo.svg" alt="WebNest Studio logo" width="36" height="36" />
+        <span>WebNest<strong>Studio</strong></span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary navbar__cta">Get a Quote</a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ════════════════════════════════ HERO ═════════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="hero__badge reveal">
+          <span class="badge-dot"></span>
+          Based in Valencia City, Bukidnon
+        </div>
+
+        <h1 class="hero__title reveal reveal--delay-1">
+          We Build Websites<br />
+          <span class="gradient-text">That Mean Business.</span>
+        </h1>
+
+        <p class="hero__sub reveal reveal--delay-2">
+          Clean, modern, and professional web experiences crafted for local businesses
+          ready to grow their presence online.
+        </p>
+
+        <div class="hero__actions reveal reveal--delay-3">
+          <a href="#portfolio" class="btn btn--primary btn--lg">See Our Work</a>
+          <a href="#contact" class="btn btn--ghost btn--lg">Let's Talk</a>
+        </div>
+
+        <div class="hero__stats reveal reveal--delay-4">
+          <div class="stat">
+            <span class="stat__num">100%</span>
+            <span class="stat__label">Custom Built</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__num">Fast</span>
+            <span class="stat__label">Turnaround</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__num">Local</span>
+            <span class="stat__label">& Accessible</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ ABOUT ════════════════════════════════ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__visual reveal">
+            <div class="about__card-graphic">
+              <div class="code-block">
+                <div class="code-block__bar">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <pre><code><span class="c-keyword">const</span> <span class="c-var">studio</span> = {
+  <span class="c-key">name</span>:     <span class="c-str">"WebNest Studio"</span>,
+  <span class="c-key">location</span>: <span class="c-str">"Valencia City, BUK"</span>,
+  <span class="c-key">passion</span>:  <span class="c-str">"Crafting the web"</span>,
+  <span class="c-key">mission</span>:  <span class="c-str">"Grow your business"</span>,
+};</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__text">
+            <p class="section__eyebrow reveal">Who We Are</p>
+            <h2 class="section__title reveal">Young Devs.<br />Serious Work.</h2>
+            <p class="about__body reveal">
+              We are a team of Grade 12 students from Valencia City, Bukidnon with a deep
+              passion for coding and a drive to create. What started as a love for building
+              things on the web turned into <strong>WebNest Studio</strong> — a studio
+              dedicated to delivering high-quality websites for businesses right here in
+              our province and beyond.
+            </p>
+            <p class="about__body reveal">
+              We may be young, but our work speaks for itself. Every site we build is
+              thoughtfully designed, hand-coded with care, and tailored to help your
+              business stand out online.
+            </p>
+            <a href="#contact" class="btn btn--primary reveal">Work With Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SERVICES ═══════════════════════════════ -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">What We Offer</p>
+          <h2 class="section__title reveal">Services Built<br />for Your Business</h2>
+          <p class="section__sub reveal">
+            Everything you need to get online and make a lasting impression.
+          </p>
+        </div>
+
+        <div class="services__grid">
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3>Website Design</h3>
+            <p>Visually stunning, responsive websites designed from scratch to reflect your brand identity and captivate visitors.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3>Business Websites</h3>
+            <p>Professional multi-page websites that establish credibility, showcase your services, and convert visitors into customers.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/>
+              </svg>
+            </div>
+            <h3>Landing Pages</h3>
+            <p>High-converting, focused landing pages built to promote your product, service, or event and drive real results.</p>
+          </div>
+
+          <div class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Maintenance & Support</h3>
+            <p>Ongoing updates, content changes, and technical support to keep your website running smoothly after launch.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ WHY US ════════════════════════════════ -->
+    <section class="section why-us" id="why-us">
+      <div class="why-us__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">Why Choose Us</p>
+          <h2 class="section__title reveal">Built Different,<br />Delivered Better</h2>
+        </div>
+
+        <div class="why-us__grid">
+
+          <div class="why-card reveal">
+            <div class="why-card__num">01</div>
+            <h3>Affordable for Local Businesses</h3>
+            <p>We understand the budget reality of small local businesses. Our rates are fair, transparent, and designed to give you maximum value.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__num">02</div>
+            <h3>100% Custom — No Templates</h3>
+            <p>Every website is hand-coded from the ground up. No drag-and-drop builders, no recycled themes — just clean, original work.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__num">03</div>
+            <h3>Fast Delivery</h3>
+            <p>We work efficiently and communicate clearly throughout the process so you get your website up and running without the long wait.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card__num">04</div>
+            <h3>Locally Rooted, Globally Minded</h3>
+            <p>We're from Valencia City, Bukidnon — we know this community. But our designs meet international standards your customers will trust.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ PORTFOLIO ══════════════════════════════ -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">Our Work</p>
+          <h2 class="section__title reveal">Projects in the Nest</h2>
+          <p class="section__sub reveal">
+            Real websites we've designed and built. Clean code, modern design, crafted with care.
+          </p>
+        </div>
+
+        <div class="portfolio__grid">
+
+          <!-- Valencia Brew Café — Live Project -->
+          <div class="portfolio-card portfolio-card--live reveal">
+            <a href="portfolio/valencia-brew-cafe/index.html" target="_blank" rel="noopener" class="portfolio-card__link" aria-label="View Valencia Brew Café website">
+              <div class="portfolio-card__preview">
+                <div class="pf-preview pf-preview--cafe">
+                  <div class="pf-preview__bar">
+                    <span class="pf-dot"></span><span class="pf-dot"></span><span class="pf-dot"></span>
+                    <span class="pf-url">valenciabrew.ph</span>
+                  </div>
+                  <div class="pf-preview__content">
+                    <div class="pf-hero-mock">
+                      <div class="pf-logo-mock">Valencia Brew <em>Café</em></div>
+                      <div class="pf-tagline-mock">Your Daily Ritual, Perfectly Brewed.</div>
+                      <div class="pf-btn-mock"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <div class="portfolio-card__meta">
+                  <span class="portfolio-card__tag">Café &amp; Restaurant</span>
+                  <span class="portfolio-card__live-badge">
+                    <span class="live-dot"></span> Live
+                  </span>
+                </div>
+                <h3 class="portfolio-card__title">Valencia Brew Café</h3>
+                <p class="portfolio-card__desc">Full-featured café website with a coffee menu, Instagram gallery, reservation system, loyalty program, opening hours, and testimonials.</p>
+                <div class="portfolio-card__stack">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <span class="portfolio-card__cta">
+                  View Project
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Bukidnon Highlands Resort — Live Project -->
+          <div class="portfolio-card portfolio-card--live reveal">
+            <a href="portfolio/bukidnon-highlands-resort/index.html" target="_blank" rel="noopener" class="portfolio-card__link" aria-label="View Bukidnon Highlands Resort website">
+              <div class="portfolio-card__preview">
+                <div class="pf-preview pf-preview--resort">
+                  <div class="pf-preview__bar">
+                    <span class="pf-dot"></span><span class="pf-dot"></span><span class="pf-dot"></span>
+                    <span class="pf-url">bukidnonhighlands.ph</span>
+                  </div>
+                  <div class="pf-preview__content">
+                    <div class="pf-hero-mock">
+                      <div class="pf-logo-mock pf-logo-mock--resort">Bukidnon Highlands <em>Resort</em></div>
+                      <div class="pf-tagline-mock">Where the Mountains Meet Luxury.</div>
+                      <div class="pf-btn-mock pf-btn-mock--resort"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <div class="portfolio-card__meta">
+                  <span class="portfolio-card__tag portfolio-card__tag--green">Resort &amp; Tourism</span>
+                  <span class="portfolio-card__live-badge">
+                    <span class="live-dot"></span> Live
+                  </span>
+                </div>
+                <h3 class="portfolio-card__title">Bukidnon Highlands Resort</h3>
+                <p class="portfolio-card__desc">Luxury resort website with room showcase, booking inquiry, mosaic gallery, amenities, activities, packages, and FAQ accordion.</p>
+                <div class="portfolio-card__stack">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <span class="portfolio-card__cta">
+                  View Project
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="portfolio-card portfolio-card--coming-soon reveal">
+            <div class="portfolio-card__inner">
+              <div class="portfolio-card__label">Coming Soon</div>
+              <p class="portfolio-card__type">Service Business</p>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="portfolio__note reveal">
+          Want to be our next featured project? <a href="#contact" class="link">Let's build something together.</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ CONTACT ════════════════════════════════ -->
+    <section class="section contact" id="contact">
+      <div class="contact__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact__grid">
+
+          <div class="contact__info">
+            <p class="section__eyebrow reveal">Get in Touch</p>
+            <h2 class="section__title reveal">Let's Build<br />Something Great.</h2>
+            <p class="contact__body reveal">
+              Ready to take your business online? Have a project in mind? We'd love to
+              hear from you. Send us a message or reach out directly — we respond fast.
+            </p>
+
+            <div class="contact__details reveal">
+              <a href="mailto:webneststudiobkdn@gmail.com" class="contact__item">
+                <div class="contact__item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact__item-label">Email Us</span>
+                  <span class="contact__item-value">webneststudiobkdn@gmail.com</span>
+                </div>
+              </a>
+
+              <div class="contact__item">
+                <div class="contact__item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact__item-label">Location</span>
+                  <span class="contact__item-value">Valencia City, Bukidnon, Philippines</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact__form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="business">Business / Project Type</label>
+              <input type="text" id="business" name="business" placeholder="e.g. Restaurant, Salon, Online Store" />
+            </div>
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project</label>
+              <textarea id="message" name="message" rows="5" placeholder="Describe your vision, goals, or any questions you have..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span class="btn__text">Send Message</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+            <p class="form__note">We'll reply to your email within 24 hours.</p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="navbar__logo">
+          <img src="assets/logo.svg" alt="WebNest Studio logo" width="32" height="32" />
+          <span>WebNest<strong>Studio</strong></span>
+        </a>
+        <p>Crafting the web, one nest at a time.<br />Valencia City, Bukidnon, Philippines.</p>
+        <a href="mailto:webneststudiobkdn@gmail.com" class="footer__email">
+          webneststudiobkdn@gmail.com
+        </a>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer__cta-block">
+        <h4>Ready to get started?</h4>
+        <p>Let's turn your idea into a website that works.</p>
+        <a href="#contact" class="btn btn--primary">Get a Free Quote</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> WebNest Studio. All rights reserved.</p>
+        <p>Made with care in Valencia City, Bukidnon.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

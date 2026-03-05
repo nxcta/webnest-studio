@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bukidnon Highlands Resort — A serene mountain escape nestled in the cool mist of Bukidnon's highlands. Luxury rooms, nature activities, and world-class amenities." />
+  <title>Bukidnon Highlands Resort | Mountain Luxury · Bukidnon, Philippines</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAVBAR — CENTERED LOGO ════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <nav class="navbar__nav navbar__nav--left" aria-label="Left navigation">
+        <a href="#rooms">Rooms</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#activities">Activities</a>
+      </nav>
+
+      <a href="#home" class="navbar__logo">
+        <svg class="logo-leaf" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2 C6 6 2 14 4 22 C6 28 10 30 14 30 C18 30 22 28 24 22 C26 14 22 6 14 2Z" fill="currentColor" opacity="0.2"/>
+          <path d="M14 2 C6 6 2 14 4 22 C6 28 10 30 14 30 C18 30 22 28 24 22 C26 14 22 6 14 2Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="6" x2="14" y2="29" stroke="currentColor" stroke-width="0.8" opacity="0.6"/>
+          <path d="M14 12 Q8 16 6 20" stroke="currentColor" stroke-width="0.7" opacity="0.5" fill="none"/>
+          <path d="M14 18 Q20 20 22 24" stroke="currentColor" stroke-width="0.7" opacity="0.5" fill="none"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-name">Bukidnon Highlands</span>
+          <span class="logo-sub">R E S O R T</span>
+        </div>
+      </a>
+
+      <nav class="navbar__nav navbar__nav--right" aria-label="Right navigation">
+        <a href="#gallery">Gallery</a>
+        <a href="#packages">Packages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#booking" class="btn btn--primary navbar__cta-mobile">Book Now</a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="navbar__nav navbar__nav--drawer" id="navMenu" aria-label="Mobile navigation">
+      <a href="#rooms">Rooms</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#activities">Activities</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="btn btn--primary" style="margin-top:1rem;">Book Now</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════ SPLIT HERO ════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero__left">
+        <div class="hero__left-content">
+          <div class="hero__label reveal">
+            <span class="dot-pulse"></span>
+            Valencia City, Bukidnon · 1,200m elevation
+          </div>
+          <h1 class="hero__title reveal reveal--d1">
+            Where the<br />
+            <em>Mountains</em><br />
+            Meet Luxury.
+          </h1>
+          <p class="hero__sub reveal reveal--d2">
+            Escape to the cool highland air of Bukidnon. A world-class mountain resort
+            surrounded by pine forests, mist-covered peaks, and endless serenity.
+          </p>
+          <div class="hero__actions reveal reveal--d3">
+            <a href="#booking" class="btn btn--gold btn--lg">Book Your Stay</a>
+            <a href="#rooms" class="btn btn--ghost btn--lg">Explore Rooms</a>
+          </div>
+          <div class="hero__trust reveal reveal--d4">
+            <div class="trust-item">
+              <strong>4.9</strong>
+              <span>★★★★★ Rating</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+              <strong>500+</strong>
+              <span>Happy Guests</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+              <strong>1,200m</strong>
+              <span>Elevation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="hero__visual">
+          <!-- Mountain landscape illustration -->
+          <div class="mountain-scene" aria-hidden="true">
+            <svg class="mountain-svg" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Sky layers -->
+              <defs>
+                <radialGradient id="skyGrad" cx="50%" cy="30%" r="70%">
+                  <stop offset="0%" stop-color="#1A3D22" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#060F08" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4A9B5E" stop-opacity="0.05"/>
+                  <stop offset="100%" stop-color="#4A9B5E" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <rect width="600" height="500" fill="url(#skyGrad)"/>
+              <!-- Far mountains -->
+              <path d="M0 350 L80 180 L160 280 L240 130 L320 220 L400 100 L480 200 L560 150 L600 220 L600 500 L0 500Z" fill="rgba(10,30,15,0.6)"/>
+              <!-- Mid mountains -->
+              <path d="M0 400 L100 260 L180 320 L280 200 L360 280 L440 180 L520 260 L600 300 L600 500 L0 500Z" fill="rgba(13,40,18,0.7)"/>
+              <!-- Mist band -->
+              <rect x="0" y="300" width="600" height="60" fill="rgba(74,155,94,0.06)"/>
+              <rect x="0" y="320" width="600" height="40" fill="rgba(255,255,255,0.03)"/>
+              <!-- Foreground hills -->
+              <path d="M0 450 L120 360 L220 400 L320 340 L420 380 L520 330 L600 370 L600 500 L0 500Z" fill="rgba(15,50,20,0.8)"/>
+              <!-- Pine trees left -->
+              <g opacity="0.7">
+                <polygon points="40,420 50,390 60,420" fill="#1A4022"/>
+                <polygon points="45,410 55,375 65,410" fill="#1D4826"/>
+                <polygon points="20,435 32,400 44,435" fill="#183B1E"/>
+                <polygon points="70,428 82,395 94,428" fill="#1A4022"/>
+              </g>
+              <!-- Pine trees right -->
+              <g opacity="0.7">
+                <polygon points="520,425 530,395 540,425" fill="#1A4022"/>
+                <polygon points="545,418 557,385 569,418" fill="#1D4826"/>
+                <polygon points="500,432 514,398 528,432" fill="#183B1E"/>
+                <polygon points="565,430 575,400 585,430" fill="#1A4022"/>
+              </g>
+              <!-- Stars / particles -->
+              <circle cx="100" cy="80" r="1.5" fill="rgba(200,168,76,0.6)"/>
+              <circle cx="240" cy="50" r="1" fill="rgba(200,168,76,0.4)"/>
+              <circle cx="380" cy="70" r="1.5" fill="rgba(200,168,76,0.5)"/>
+              <circle cx="500" cy="40" r="1" fill="rgba(200,168,76,0.4)"/>
+              <circle cx="160" cy="110" r="0.8" fill="rgba(200,168,76,0.3)"/>
+              <circle cx="450" cy="90" r="1.2" fill="rgba(200,168,76,0.5)"/>
+              <!-- Moon -->
+              <circle cx="480" cy="70" r="22" fill="rgba(200,168,76,0.08)" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+              <circle cx="480" cy="70" r="16" fill="rgba(200,168,76,0.06)"/>
+            </svg>
+
+            <div class="hero__card-float hero__card-float--1">
+              <div class="float-card">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="16" height="16"><path d="M10 2C6 2 3 5 3 9c0 5.25 7 11 7 11s7-5.75 7-11c0-4-3-7-7-7z"/><circle cx="10" cy="9" r="2.5"/></svg>
+                <div>
+                  <strong>Valencia City</strong>
+                  <span>Bukidnon, PH</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__card-float hero__card-float--2">
+              <div class="float-card float-card--weather">
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="16" height="16"><circle cx="10" cy="10" r="4"/><path d="M10 1v2M10 17v2M1 10h2M17 10h2M3.5 3.5l1.5 1.5M15 15l1.5 1.5M3.5 16.5l1.5-1.5M15 5l1.5-1.5"/></svg>
+                <div>
+                  <strong>18°C</strong>
+                  <span>Cool &amp; Misty</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ INTRO STRIP ══════════════════════════════ -->
+    <div class="intro-strip">
+      <div class="intro-strip__inner">
+        <div class="intro-strip__item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>12 Luxury Rooms</span>
+        </div>
+        <div class="intro-strip__dot" aria-hidden="true"></div>
+        <div class="intro-strip__item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Private &amp; Secure</span>
+        </div>
+        <div class="intro-strip__dot" aria-hidden="true"></div>
+        <div class="intro-strip__item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Open Year-Round</span>
+        </div>
+        <div class="intro-strip__dot" aria-hidden="true"></div>
+        <div class="intro-strip__item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          <span>All-Inclusive Options</span>
+        </div>
+        <div class="intro-strip__dot" aria-hidden="true"></div>
+        <div class="intro-strip__item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          <span>Dedicated Staff</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════ ABOUT ════════════════════════════════ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about__layout">
+          <div class="about__large-num reveal" aria-hidden="true">BHR</div>
+          <div class="about__content">
+            <p class="eyebrow reveal">About the Resort</p>
+            <h2 class="section__title reveal">An Escape Above<br /><em>the Clouds</em></h2>
+            <div class="about__cols">
+              <p class="reveal">
+                Perched at 1,200 meters above sea level in the lush highlands of Bukidnon, Bukidnon Highlands Resort
+                is where modern luxury meets untouched nature. Here, the cool mountain breeze replaces the air conditioning,
+                and the sweeping views replace any screen.
+              </p>
+              <p class="reveal">
+                Whether you're seeking a romantic weekend retreat, a family adventure, or a corporate offsite unlike any
+                other — our resort offers an experience rooted in the natural beauty of Mindanao's highlands.
+                Every detail, from the locally crafted interiors to the farm-to-table dining, reflects our commitment
+                to Bukidnon's culture and environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ ROOMS ════════════════════════════════ -->
+    <section class="section rooms" id="rooms">
+      <div class="container rooms__header">
+        <div>
+          <p class="eyebrow reveal">Accommodations</p>
+          <h2 class="section__title reveal">Choose Your Sanctuary</h2>
+        </div>
+        <p class="rooms__sub reveal">All rooms include breakfast, WiFi, and access to resort amenities.</p>
+      </div>
+
+      <div class="rooms__scroll-track" id="roomsTrack">
+
+        <article class="room-card">
+          <div class="room-card__visual room-card__visual--forest">
+            <div class="room-scene room-scene--forest">
+              <svg viewBox="0 0 360 240" fill="none" class="room-scene__svg">
+                <rect width="360" height="240" fill="#0A1F10"/>
+                <path d="M0 200 Q90 160 180 180 Q270 160 360 200 L360 240 L0 240Z" fill="#0D2817"/>
+                <path d="M60 180 L75 130 L90 180Z" fill="#163520"/>
+                <path d="M70 175 L87 118 L104 175Z" fill="#1A3E26"/>
+                <path d="M280 185 L295 135 L310 185Z" fill="#163520"/>
+                <path d="M290 178 L307 122 L324 178Z" fill="#1A3E26"/>
+                <rect x="140" y="120" width="80" height="90" rx="4" fill="#1C3D22" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <rect x="155" y="135" width="22" height="28" rx="2" fill="rgba(200,168,76,0.15)" stroke="rgba(200,168,76,0.3)" stroke-width="0.8"/>
+                <rect x="183" y="135" width="22" height="28" rx="2" fill="rgba(200,168,76,0.15)" stroke="rgba(200,168,76,0.3)" stroke-width="0.8"/>
+                <path d="M130 120 L180 95 L230 120Z" fill="#224A2A"/>
+                <circle cx="180" cy="50" r="18" fill="rgba(200,168,76,0.07)" stroke="rgba(200,168,76,0.18)" stroke-width="0.8"/>
+                <circle cx="300" cy="35" r="1.5" fill="rgba(200,168,76,0.6)"/>
+                <circle cx="60" cy="55" r="1.2" fill="rgba(200,168,76,0.5)"/>
+                <circle cx="240" cy="25" r="1" fill="rgba(200,168,76,0.4)"/>
+              </svg>
+            </div>
+            <div class="room-card__badge">From ₱3,500 / night</div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__type">Standard</div>
+            <h3>Forest View Room</h3>
+            <p>Wake up to panoramic pine forest views from your private balcony. Warm wooden interiors with locally woven accents and plush mountain bedding.</p>
+            <ul class="room-card__features">
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                King or Twin beds
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Private forest-view balcony
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                En-suite hot &amp; cold shower
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Sleeps up to 2 guests
+              </li>
+            </ul>
+            <a href="#booking" class="btn btn--ghost-green">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="room-card room-card--featured">
+          <div class="room-card__featured-label">Most Popular</div>
+          <div class="room-card__visual room-card__visual--highland">
+            <div class="room-scene room-scene--highland">
+              <svg viewBox="0 0 360 240" fill="none" class="room-scene__svg">
+                <rect width="360" height="240" fill="#071A0C"/>
+                <path d="M0 210 Q180 150 360 210 L360 240 L0 240Z" fill="#0D2817"/>
+                <path d="M0 240 L100 170 L200 195 L300 160 L360 185 L360 240Z" fill="#0A2010"/>
+                <rect x="100" y="80" width="160" height="140" rx="6" fill="#183522" stroke="rgba(200,168,76,0.25)" stroke-width="1.5"/>
+                <rect x="115" y="100" width="35" height="50" rx="3" fill="rgba(200,168,76,0.12)" stroke="rgba(200,168,76,0.35)" stroke-width="1"/>
+                <rect x="160" y="100" width="35" height="50" rx="3" fill="rgba(200,168,76,0.12)" stroke="rgba(200,168,76,0.35)" stroke-width="1"/>
+                <rect x="205" y="100" width="35" height="50" rx="3" fill="rgba(200,168,76,0.12)" stroke="rgba(200,168,76,0.35)" stroke-width="1"/>
+                <path d="M88 80 L180 45 L272 80Z" fill="#1E4228"/>
+                <path d="M100 80 L180 52 L260 80Z" fill="#224A2A"/>
+                <!-- Deck -->
+                <rect x="80" y="175" width="200" height="20" rx="2" fill="#1A3C22" stroke="rgba(200,168,76,0.15)" stroke-width="1"/>
+                <line x1="100" y1="175" x2="100" y2="195" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <line x1="130" y1="175" x2="130" y2="195" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <line x1="160" y1="175" x2="160" y2="195" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <line x1="190" y1="175" x2="190" y2="195" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <line x1="220" y1="175" x2="220" y2="195" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <line x1="250" y1="175" x2="250" y2="195" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <!-- Moon -->
+                <circle cx="300" cy="40" r="20" fill="rgba(200,168,76,0.07)" stroke="rgba(200,168,76,0.2)" stroke-width="1"/>
+                <circle cx="310" cy="35" r="3" fill="rgba(200,168,76,0.5)"/>
+                <circle cx="60" cy="30" r="1.5" fill="rgba(200,168,76,0.6)"/>
+                <circle cx="180" cy="20" r="1.2" fill="rgba(200,168,76,0.4)"/>
+              </svg>
+            </div>
+            <div class="room-card__badge">From ₱5,800 / night</div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__type">Deluxe</div>
+            <h3>Highland Suite</h3>
+            <p>Our signature highland suite with sweeping 180° mountain views, a private wooden deck, stone fireplace, and a deep-soak clawfoot bathtub.</p>
+            <ul class="room-card__features">
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                King canopy bed
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Private deck &amp; stone fireplace
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Clawfoot soaking tub
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Sleeps up to 2 guests
+              </li>
+            </ul>
+            <a href="#booking" class="btn btn--gold">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-card__visual room-card__visual--villa">
+            <div class="room-scene room-scene--villa">
+              <svg viewBox="0 0 360 240" fill="none" class="room-scene__svg">
+                <rect width="360" height="240" fill="#091512"/>
+                <path d="M0 220 Q180 175 360 220 L360 240 L0 240Z" fill="#0D2217"/>
+                <!-- Main villa -->
+                <rect x="60" y="90" width="240" height="130" rx="4" fill="#163322" stroke="rgba(200,168,76,0.2)" stroke-width="1.5"/>
+                <!-- Left wing -->
+                <rect x="20" y="120" width="60" height="100" rx="3" fill="#122E1E" stroke="rgba(200,168,76,0.15)" stroke-width="1"/>
+                <!-- Right wing -->
+                <rect x="280" y="120" width="60" height="100" rx="3" fill="#122E1E" stroke="rgba(200,168,76,0.15)" stroke-width="1"/>
+                <!-- Windows main -->
+                <rect x="90" y="110" width="30" height="40" rx="2" fill="rgba(200,168,76,0.15)" stroke="rgba(200,168,76,0.4)" stroke-width="1"/>
+                <rect x="165" y="110" width="30" height="40" rx="2" fill="rgba(200,168,76,0.15)" stroke="rgba(200,168,76,0.4)" stroke-width="1"/>
+                <rect x="240" y="110" width="30" height="40" rx="2" fill="rgba(200,168,76,0.15)" stroke="rgba(200,168,76,0.4)" stroke-width="1"/>
+                <!-- Roof -->
+                <path d="M45 90 L180 50 L315 90Z" fill="#1C3E28"/>
+                <path d="M55 90 L180 56 L305 90Z" fill="#204428"/>
+                <!-- Pool suggestion -->
+                <ellipse cx="180" cy="215" rx="60" ry="15" fill="rgba(74,155,94,0.12)" stroke="rgba(74,155,94,0.25)" stroke-width="1"/>
+                <circle cx="80" cy="35" r="1.8" fill="rgba(200,168,76,0.7)"/>
+                <circle cx="280" cy="45" r="1.2" fill="rgba(200,168,76,0.5)"/>
+                <circle cx="160" cy="25" r="1.5" fill="rgba(200,168,76,0.4)"/>
+                <circle cx="320" cy="20" r="2" fill="rgba(200,168,76,0.6)"/>
+              </svg>
+            </div>
+            <div class="room-card__badge">From ₱12,000 / night</div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__type">Premium</div>
+            <h3>Private Mountain Villa</h3>
+            <p>The pinnacle of highland luxury. A standalone private villa with a plunge pool, full kitchen, two bedrooms, and your own stretch of mountain garden.</p>
+            <ul class="room-card__features">
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                2 bedrooms · full kitchen
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Private plunge pool
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Dedicated butler service
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Sleeps up to 4 guests
+              </li>
+            </ul>
+            <a href="#booking" class="btn btn--ghost-green">Inquire Now</a>
+          </div>
+        </article>
+
+        <article class="room-card">
+          <div class="room-card__visual room-card__visual--family">
+            <div class="room-scene room-scene--family">
+              <svg viewBox="0 0 360 240" fill="none" class="room-scene__svg">
+                <rect width="360" height="240" fill="#0C1A10"/>
+                <path d="M0 210 L80 175 L160 195 L240 165 L360 200 L360 240 L0 240Z" fill="#0F2618"/>
+                <rect x="80" y="70" width="200" height="150" rx="5" fill="#163322" stroke="rgba(200,168,76,0.2)" stroke-width="1.2"/>
+                <rect x="100" y="90" width="70" height="50" rx="3" fill="rgba(200,168,76,0.1)" stroke="rgba(200,168,76,0.3)" stroke-width="1"/>
+                <rect x="190" y="90" width="70" height="50" rx="3" fill="rgba(200,168,76,0.1)" stroke="rgba(200,168,76,0.3)" stroke-width="1"/>
+                <!-- Bunk bed suggestion -->
+                <rect x="100" y="150" width="155" height="60" rx="3" fill="rgba(20,50,30,0.8)" stroke="rgba(200,168,76,0.15)" stroke-width="0.8"/>
+                <line x1="100" y1="177" x2="255" y2="177" stroke="rgba(200,168,76,0.2)" stroke-width="0.8"/>
+                <path d="M65 70 L180 35 L295 70Z" fill="#1C3E28"/>
+                <rect x="150" y="185" width="60" height="35" rx="2" fill="#1A3C22" stroke="rgba(200,168,76,0.15)" stroke-width="0.8"/>
+                <circle cx="120" cy="30" r="1.5" fill="rgba(200,168,76,0.6)"/>
+                <circle cx="250" cy="20" r="1.2" fill="rgba(200,168,76,0.4)"/>
+                <circle cx="60" cy="45" r="1" fill="rgba(200,168,76,0.3)"/>
+              </svg>
+            </div>
+            <div class="room-card__badge">From ₱7,500 / night</div>
+          </div>
+          <div class="room-card__body">
+            <div class="room-card__type">Family</div>
+            <h3>Family Cabin</h3>
+            <p>Designed for families who adventure together. Spacious cabin with bunk beds for the kids, a master bedroom, and a shared living area with mountain views.</p>
+            <ul class="room-card__features">
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Master + bunk room
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Shared living &amp; dining area
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Kids play nook
+              </li>
+              <li>
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="13" height="13"><polyline points="13 3 6 12 3 8"/></svg>
+                Sleeps up to 6 guests
+              </li>
+            </ul>
+            <a href="#booking" class="btn btn--ghost-green">Inquire Now</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="rooms__scroll-hint" aria-hidden="true">
+        <span></span>
+        <span>Scroll to explore rooms</span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ AMENITIES ══════════════════════════════ -->
+    <section class="section amenities" id="amenities">
+      <div class="amenities__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="amenities__layout">
+          <div class="amenities__text">
+            <p class="eyebrow reveal">Resort Amenities</p>
+            <h2 class="section__title reveal">Everything You<br /><em>Could Need</em></h2>
+            <p class="amenities__sub reveal">
+              From sunrise to starlight — our resort is equipped with everything
+              to make your highland stay unforgettable.
+            </p>
+            <a href="#booking" class="btn btn--gold reveal">Book a Stay</a>
+          </div>
+
+          <div class="amenities__grid">
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V6a2 2 0 012-2h12a2 2 0 012 2v16"/><path d="M10 22v-5a1 1 0 011-1h2a1 1 0 011 1v5"/><path d="M9 9h1M14 9h1M9 13h1M14 13h1"/></svg>
+              </div>
+              <div>
+                <h4>Infinity Pool</h4>
+                <p>Heated pool overlooking the mountain valley. Open 6AM–9PM.</p>
+              </div>
+            </div>
+
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <div>
+                <h4>Farm-to-Table Restaurant</h4>
+                <p>Locally sourced ingredients from Bukidnon farms. Breakfast included.</p>
+              </div>
+            </div>
+
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <h4>Spa &amp; Wellness Center</h4>
+                <p>Hilot massage, aromatherapy, and highland herbal treatments.</p>
+              </div>
+            </div>
+
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div>
+                <h4>High-Speed WiFi</h4>
+                <p>Fiber internet throughout the resort. Perfect for remote work stays.</p>
+              </div>
+            </div>
+
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              </div>
+              <div>
+                <h4>Bonfire Pit</h4>
+                <p>Nightly bonfire sessions under the stars. S'mores on request.</p>
+              </div>
+            </div>
+
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div>
+                <h4>Event &amp; Function Hall</h4>
+                <p>Seats up to 80 guests. Ideal for weddings, reunions, and team events.</p>
+              </div>
+            </div>
+
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+              </div>
+              <div>
+                <h4>24-Hour Concierge</h4>
+                <p>Our team is always on standby for any request, big or small.</p>
+              </div>
+            </div>
+
+            <div class="amenity reveal">
+              <div class="amenity__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4>Secure Parking</h4>
+                <p>Free covered parking for all guests. CCTV monitored 24/7.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ ACTIVITIES ════════════════════════════ -->
+    <section class="section activities" id="activities">
+      <div class="container">
+        <div class="section__header-left">
+          <p class="eyebrow reveal">Experiences</p>
+          <h2 class="section__title reveal">Adventure Awaits<br /><em>Outside Your Door</em></h2>
+        </div>
+        <div class="activities__grid">
+          <div class="activity-card activity-card--large reveal">
+            <div class="activity-card__num">01</div>
+            <div class="activity-card__icon">🥾</div>
+            <h3>Highland Trekking</h3>
+            <p>Guided sunrise and sunset treks through Bukidnon's pine forest trails. Routes for all fitness levels, from easy nature walks to challenging peak climbs.</p>
+            <div class="activity-card__meta">
+              <span>Half-day &amp; Full-day</span>
+              <span>Guide included</span>
+            </div>
+          </div>
+
+          <div class="activity-card reveal">
+            <div class="activity-card__num">02</div>
+            <div class="activity-card__icon">🏇</div>
+            <h3>Horseback Riding</h3>
+            <p>Trail rides through open highland meadows and forest paths. Beginner-friendly with trained horses and experienced guides.</p>
+            <div class="activity-card__meta">
+              <span>1–2 hours</span>
+              <span>All levels</span>
+            </div>
+          </div>
+
+          <div class="activity-card reveal">
+            <div class="activity-card__num">03</div>
+            <div class="activity-card__icon">🌄</div>
+            <h3>Sunrise Viewing</h3>
+            <p>Wake up early and join our guided sunrise deck experience. Coffee, hot chocolate, and a view that will stay with you forever.</p>
+            <div class="activity-card__meta">
+              <span>4:30 – 6:30 AM</span>
+              <span>Daily</span>
+            </div>
+          </div>
+
+          <div class="activity-card reveal">
+            <div class="activity-card__num">04</div>
+            <div class="activity-card__icon">🎣</div>
+            <h3>Highland Fishing</h3>
+            <p>Cast a line at our private freshwater pond stocked with tilapia and carp. Equipment provided, no experience needed.</p>
+            <div class="activity-card__meta">
+              <span>6 AM – 5 PM</span>
+              <span>Catch &amp; cook</span>
+            </div>
+          </div>
+
+          <div class="activity-card reveal">
+            <div class="activity-card__num">05</div>
+            <div class="activity-card__icon">🌿</div>
+            <h3>Farm Tour</h3>
+            <p>Visit our partner organic farm and learn about Bukidnon's agricultural heritage. Pick your own vegetables and herbs used in our restaurant.</p>
+            <div class="activity-card__meta">
+              <span>Morning only</span>
+              <span>Interactive</span>
+            </div>
+          </div>
+
+          <div class="activity-card reveal">
+            <div class="activity-card__num">06</div>
+            <div class="activity-card__icon">🔭</div>
+            <h3>Stargazing Night</h3>
+            <p>With minimal light pollution at 1,200m elevation, our highland sky is spectacular. Telescope available on clear nights.</p>
+            <div class="activity-card__meta">
+              <span>8 PM – 11 PM</span>
+              <span>Weather-dependent</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ GALLERY ══════════════════════════════ -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section__header-split reveal">
+          <div>
+            <p class="eyebrow">The View From Here</p>
+            <h2 class="section__title">Captured Moments</h2>
+          </div>
+          <p class="gallery__sub">Every corner of Bukidnon Highlands is a photograph waiting to happen.</p>
+        </div>
+      </div>
+
+      <div class="gallery__mosaic">
+        <div class="mosaic-item mosaic-item--hero" data-caption="The Highlands at golden hour" data-index="0">
+          <div class="mosaic-placeholder mp--1">
+            <div class="mp__inner">
+              <svg viewBox="0 0 300 200" fill="none"><path d="M0 140 Q75 90 150 110 Q225 90 300 140 L300 200 L0 200Z" fill="rgba(20,60,25,0.6)"/><path d="M0 160 Q150 110 300 160 L300 200 L0 200Z" fill="rgba(15,40,20,0.8)"/><circle cx="220" cy="50" r="28" fill="rgba(200,168,76,0.08)" stroke="rgba(200,168,76,0.2)" stroke-width="1"/><circle cx="220" cy="50" r="18" fill="rgba(200,168,76,0.05)"/><polygon points="40,160 55,120 70,160" fill="rgba(25,65,30,0.8)"/><polygon points="60,155 77,110 94,155" fill="rgba(30,70,35,0.8)"/><polygon points="220,165 232,132 244,165" fill="rgba(25,65,30,0.8)"/><polygon points="240,158 255,118 270,158" fill="rgba(30,70,35,0.8)"/></svg>
+              <span>Resort at Golden Hour</span>
+            </div>
+          </div>
+          <div class="mosaic-overlay"><p>The Highlands at golden hour</p></div>
+        </div>
+
+        <div class="mosaic-item" data-caption="Highland Suite interior" data-index="1">
+          <div class="mosaic-placeholder mp--2">
+            <div class="mp__inner">
+              <svg viewBox="0 0 200 200" fill="none"><rect x="30" y="50" width="140" height="110" rx="4" fill="rgba(20,50,25,0.5)" stroke="rgba(200,168,76,0.2)" stroke-width="1"/><rect x="50" y="70" width="40" height="50" rx="2" fill="rgba(200,168,76,0.1)" stroke="rgba(200,168,76,0.3)" stroke-width="0.8"/><rect x="110" y="70" width="40" height="50" rx="2" fill="rgba(200,168,76,0.1)" stroke="rgba(200,168,76,0.3)" stroke-width="0.8"/><path d="M20 50 L100 20 L180 50Z" fill="rgba(25,60,30,0.7)"/></svg>
+              <span>Suite Interior</span>
+            </div>
+          </div>
+          <div class="mosaic-overlay"><p>Highland Suite interior</p></div>
+        </div>
+
+        <div class="mosaic-item" data-caption="Misty morning view from the deck" data-index="2">
+          <div class="mosaic-placeholder mp--3">
+            <div class="mp__inner">
+              <svg viewBox="0 0 200 200" fill="none"><path d="M0 120 Q50 80 100 100 Q150 80 200 120 L200 200 L0 200Z" fill="rgba(15,45,20,0.7)"/><rect x="0" y="90" width="200" height="30" fill="rgba(200,220,200,0.04)"/><rect x="0" y="105" width="200" height="20" fill="rgba(255,255,255,0.02)"/></svg>
+              <span>Misty Morning</span>
+            </div>
+          </div>
+          <div class="mosaic-overlay"><p>Misty morning from the deck</p></div>
+        </div>
+
+        <div class="mosaic-item mosaic-item--tall" data-caption="Infinity pool at dusk" data-index="3">
+          <div class="mosaic-placeholder mp--4">
+            <div class="mp__inner">
+              <svg viewBox="0 0 200 300" fill="none"><rect x="20" y="140" width="160" height="80" rx="6" fill="rgba(74,155,94,0.15)" stroke="rgba(74,155,94,0.3)" stroke-width="1.5"/><path d="M20 140 Q100 120 180 140" stroke="rgba(74,155,94,0.4)" stroke-width="1" fill="none"/><path d="M20 155 Q100 135 180 155" stroke="rgba(74,155,94,0.2)" stroke-width="0.8" fill="none"/><path d="M0 240 Q100 200 200 240 L200 300 L0 300Z" fill="rgba(10,30,15,0.8)"/></svg>
+              <span>Infinity Pool</span>
+            </div>
+          </div>
+          <div class="mosaic-overlay"><p>Infinity pool at dusk</p></div>
+        </div>
+
+        <div class="mosaic-item" data-caption="Farm-to-table dining experience" data-index="4">
+          <div class="mosaic-placeholder mp--5">
+            <div class="mp__inner">
+              <svg viewBox="0 0 200 200" fill="none"><ellipse cx="100" cy="120" rx="60" ry="30" fill="rgba(20,50,25,0.4)" stroke="rgba(200,168,76,0.2)" stroke-width="1"/><circle cx="100" cy="90" r="35" fill="rgba(15,40,20,0.5)" stroke="rgba(200,168,76,0.15)" stroke-width="0.8"/><path d="M80 90 Q90 75 100 85 Q110 75 120 90" stroke="rgba(74,155,94,0.5)" stroke-width="1" fill="none" stroke-linecap="round"/></svg>
+              <span>Farm-to-Table</span>
+            </div>
+          </div>
+          <div class="mosaic-overlay"><p>Farm-to-table dining</p></div>
+        </div>
+
+        <div class="mosaic-item" data-caption="Bonfire night under the stars" data-index="5">
+          <div class="mosaic-placeholder mp--6">
+            <div class="mp__inner">
+              <svg viewBox="0 0 200 200" fill="none"><path d="M90 160 Q95 130 100 120 Q105 130 110 160Z" fill="rgba(200,100,30,0.3)"/><path d="M85 160 Q93 135 100 125 Q107 135 115 160Z" fill="rgba(200,130,30,0.2)" stroke="rgba(200,130,30,0.3)" stroke-width="0.5"/><circle cx="100" cy="162" r="20" fill="rgba(200,100,30,0.08)"/><circle cx="50" cy="40" r="1.5" fill="rgba(200,168,76,0.7)"/><circle cx="150" cy="30" r="1.2" fill="rgba(200,168,76,0.5)"/><circle cx="30" cy="70" r="1" fill="rgba(200,168,76,0.4)"/><circle cx="170" cy="60" r="1.8" fill="rgba(200,168,76,0.6)"/></svg>
+              <span>Bonfire Night</span>
+            </div>
+          </div>
+          <div class="mosaic-overlay"><p>Bonfire under the stars</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ PACKAGES ═══════════════════════════════ -->
+    <section class="section packages" id="packages">
+      <div class="container">
+        <div class="section__header">
+          <p class="eyebrow reveal">Stay Packages</p>
+          <h2 class="section__title reveal">Curated for Every<br />Kind of Getaway</h2>
+        </div>
+
+        <div class="packages__grid">
+
+          <div class="package-card reveal">
+            <div class="package-card__header">
+              <span class="package-card__icon">🌿</span>
+              <h3>Weekend Escape</h3>
+              <div class="package-card__price">From <strong>₱7,500</strong> <span>/ 2 nights</span></div>
+            </div>
+            <ul class="package-card__list">
+              <li>2 nights in Forest View Room</li>
+              <li>Daily highland breakfast for 2</li>
+              <li>1 guided nature trek</li>
+              <li>Access to pool &amp; amenities</li>
+              <li>Welcome drinks on arrival</li>
+            </ul>
+            <a href="#booking" class="btn btn--outline-gold btn--full">Book This Package</a>
+          </div>
+
+          <div class="package-card package-card--featured reveal">
+            <div class="package-card__recommended">Best Value</div>
+            <div class="package-card__header">
+              <span class="package-card__icon">⛰️</span>
+              <h3>Highland Retreat</h3>
+              <div class="package-card__price">From <strong>₱15,000</strong> <span>/ 3 nights</span></div>
+            </div>
+            <ul class="package-card__list">
+              <li>3 nights in Highland Suite</li>
+              <li>All meals included (3x daily)</li>
+              <li>Sunrise trek + horseback ride</li>
+              <li>60-min spa treatment per guest</li>
+              <li>Stargazing night session</li>
+              <li>Bonfire &amp; s'mores evening</li>
+            </ul>
+            <a href="#booking" class="btn btn--gold btn--full">Book This Package</a>
+          </div>
+
+          <div class="package-card reveal">
+            <div class="package-card__header">
+              <span class="package-card__icon">👨‍👩‍👧‍👦</span>
+              <h3>Family Adventure</h3>
+              <div class="package-card__price">From <strong>₱18,000</strong> <span>/ 3 nights</span></div>
+            </div>
+            <ul class="package-card__list">
+              <li>3 nights in Family Cabin</li>
+              <li>Breakfast &amp; dinner included</li>
+              <li>Family farm tour experience</li>
+              <li>Kids' highland fishing activity</li>
+              <li>Horseback riding (all members)</li>
+              <li>Bonfire &amp; outdoor movie night</li>
+            </ul>
+            <a href="#booking" class="btn btn--outline-gold btn--full">Book This Package</a>
+          </div>
+
+        </div>
+        <p class="packages__note reveal">All packages are subject to availability. Custom packages available for groups of 10 or more. <a href="#booking" class="text-link">Inquire here.</a></p>
+      </div>
+    </section>
+
+    <!-- ════════════════════ TESTIMONIALS ════════════════════════════════ -->
+    <section class="section testimonials">
+      <div class="testimonials__bg" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow text-center reveal">Guest Reviews</p>
+        <h2 class="section__title text-center reveal">"A Place That Stays<br /><em>With You Forever"</em></h2>
+        <div class="testimonials__grid">
+
+          <div class="tcard reveal">
+            <div class="tcard__quote">"</div>
+            <p>I've stayed at resorts all over the Philippines but Bukidnon Highlands is something else entirely. The cool air, the pine trees, the views — it doesn't feel like the Philippines I know. It feels like a dream.</p>
+            <div class="tcard__author">
+              <div class="tcard__avatar">SC</div>
+              <div>
+                <strong>Sofia Cruz</strong>
+                <span>Cagayan de Oro</span>
+              </div>
+              <div class="tcard__stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="tcard reveal">
+            <div class="tcard__quote">"</div>
+            <p>We held our company retreat here and it was the best decision we made. The function hall is stunning, the team was incredibly professional, and the food was exceptional. Every single person said it was the best work trip they'd ever been on.</p>
+            <div class="tcard__author">
+              <div class="tcard__avatar">MV</div>
+              <div>
+                <strong>Marco Villanueva</strong>
+                <span>Business Owner, Davao</span>
+              </div>
+              <div class="tcard__stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="tcard reveal">
+            <div class="tcard__quote">"</div>
+            <p>Brought my family for our Christmas vacation and the kids didn't want to leave! The horseback riding, bonfire, and farm tour were the highlights. My youngest still talks about the stars she saw that night.</p>
+            <div class="tcard__author">
+              <div class="tcard__avatar">RP</div>
+              <div>
+                <strong>Ruth Padua</strong>
+                <span>Manila</span>
+              </div>
+              <div class="tcard__stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ BOOKING INQUIRY ══════════════════════════ -->
+    <section class="section booking" id="booking">
+      <div class="container booking__layout">
+
+        <div class="booking__info">
+          <p class="eyebrow reveal">Reservations</p>
+          <h2 class="section__title reveal">Plan Your<br /><em>Highland Escape</em></h2>
+          <p class="booking__body reveal">
+            Fill out the form and our reservations team will get back to you within 24 hours
+            to confirm availability, discuss your needs, and tailor your stay.
+          </p>
+          <div class="booking__contact reveal">
+            <a href="tel:+639123456789" class="booking__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.84 2a2 2 0 012-2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              +63 912 345 6789
+            </a>
+            <a href="mailto:reservations@bukidnonhighlands.ph" class="booking__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              reservations@bukidnonhighlands.ph
+            </a>
+          </div>
+          <div class="booking__faq reveal">
+            <div class="faq-item" data-open="false">
+              <button class="faq-item__q">What is the check-in / check-out time?</button>
+              <div class="faq-item__a">Check-in is at 2:00 PM and check-out is at 12:00 NN. Early check-in and late check-out are available upon request, subject to availability.</div>
+            </div>
+            <div class="faq-item" data-open="false">
+              <button class="faq-item__q">Is breakfast included in all rooms?</button>
+              <div class="faq-item__a">Yes, all room rates include a daily highland breakfast for the number of guests booked. Additional guests can be added for ₱350 per person per day.</div>
+            </div>
+            <div class="faq-item" data-open="false">
+              <button class="faq-item__q">Are pets allowed at the resort?</button>
+              <div class="faq-item__a">We are a pet-friendly resort for dogs and cats in our Family Cabin and Private Villa. Please inform us at the time of booking. A refundable pet deposit of ₱500 is required.</div>
+            </div>
+            <div class="faq-item" data-open="false">
+              <button class="faq-item__q">How do I get to the resort from Valencia City?</button>
+              <div class="faq-item__a">We are located 12km from Valencia City proper. We offer a complimentary shuttle from the city center for stays of 2 nights or more. Please arrange this at the time of booking.</div>
+            </div>
+          </div>
+        </div>
+
+        <form class="booking__form reveal" id="bookingForm" novalidate>
+          <h3 class="booking__form-title">Booking Inquiry</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="b-name">Full Name</label>
+              <input type="text" id="b-name" name="name" placeholder="Juan dela Cruz" required />
+            </div>
+            <div class="form-group">
+              <label for="b-email">Email Address</label>
+              <input type="email" id="b-email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="b-phone">Phone Number</label>
+            <input type="tel" id="b-phone" name="phone" placeholder="+63 912 345 6789" />
+          </div>
+
+          <div class="form-group">
+            <label for="b-room">Room Type</label>
+            <select id="b-room" name="room">
+              <option value="">Select a room type...</option>
+              <option>Forest View Room — From ₱3,500/night</option>
+              <option>Highland Suite — From ₱5,800/night</option>
+              <option>Private Mountain Villa — From ₱12,000/night</option>
+              <option>Family Cabin — From ₱7,500/night</option>
+              <option>I'd like a recommendation</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="b-checkin">Check-in Date</label>
+              <input type="date" id="b-checkin" name="checkin" required />
+            </div>
+            <div class="form-group">
+              <label for="b-checkout">Check-out Date</label>
+              <input type="date" id="b-checkout" name="checkout" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="b-adults">Adults</label>
+              <select id="b-adults" name="adults">
+                <option>1</option><option selected>2</option><option>3</option>
+                <option>4</option><option>5+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="b-children">Children</label>
+              <select id="b-children" name="children">
+                <option selected>0</option><option>1</option><option>2</option>
+                <option>3</option><option>4+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="b-special">Special Requests or Questions</label>
+            <textarea id="b-special" name="special" rows="4" placeholder="Tell us about your occasion, dietary needs, preferred activities, or any questions..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--gold btn--full">
+            Send Inquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <p class="form__note">Our team responds within 24 hours.</p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="container footer__top-inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <svg class="logo-leaf" viewBox="0 0 28 32" fill="none" width="28" height="32"><path d="M14 2 C6 6 2 14 4 22 C6 28 10 30 14 30 C18 30 22 28 24 22 C26 14 22 6 14 2Z" fill="currentColor" opacity="0.2"/><path d="M14 2 C6 6 2 14 4 22 C6 28 10 30 14 30 C18 30 22 28 24 22 C26 14 22 6 14 2Z" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="14" y1="6" x2="14" y2="29" stroke="currentColor" stroke-width="0.8" opacity="0.6"/><path d="M14 12 Q8 16 6 20" stroke="currentColor" stroke-width="0.7" opacity="0.5" fill="none"/><path d="M14 18 Q20 20 22 24" stroke="currentColor" stroke-width="0.7" opacity="0.5" fill="none"/></svg>
+            <div class="logo-text">
+              <span class="logo-name">Bukidnon Highlands</span>
+              <span class="logo-sub">R E S O R T</span>
+            </div>
+          </div>
+          <p>A luxury mountain escape in the cool highlands of Bukidnon, Philippines.</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Explore</h4>
+          <a href="#rooms">Rooms</a>
+          <a href="#amenities">Amenities</a>
+          <a href="#activities">Activities</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#packages">Packages</a>
+          <a href="#booking">Book Now</a>
+        </div>
+        <div class="footer__contact">
+          <h4>Contact</h4>
+          <p>Brgy. Mailag, Valencia City<br />Bukidnon 8709, Philippines</p>
+          <p>+63 912 345 6789</p>
+          <p>reservations@bukidnonhighlands.ph</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Bukidnon Highlands Resort. All rights reserved.</p>
+        <p>Website by <a href="../../index.html" class="footer__credit">WebNest Studio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery preview">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox__inner" id="lightboxContent"></div>
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

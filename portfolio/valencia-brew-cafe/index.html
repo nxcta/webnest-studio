@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Valencia Brew Café — Specialty coffee and artisan pastries in the heart of Valencia City, Bukidnon. Slow down, sip, and stay a while." />
+  <title>Valencia Brew Café | Specialty Coffee · Valencia City</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lato:wght@300;400;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════ ANNOUNCEMENT BAR ══════════════════════ -->
+  <div class="announce-bar">
+    <p>🫘 Now serving our new <strong>Summer Cold Brew Series</strong> — available daily until 6PM &nbsp;·&nbsp; <a href="#menu">See the menu</a></p>
+  </div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="navbar__logo">
+        <div class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 26 Q14 18 20 16 Q26 18 28 26" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <ellipse cx="20" cy="27" rx="8" ry="2.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M26 16 Q30 12 28 8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Valencia Brew</span>
+          <span class="logo-sub">CAFÉ</span>
+        </div>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu" aria-label="Primary navigation">
+        <a href="#menu">Menu</a>
+        <a href="#about">Our Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#hours">Hours</a>
+        <a href="#contact">Visit Us</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary navbar__cta">Reserve a Table</a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ════════════════════════════ HERO ════════════════════════════ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__beans" id="heroCanvas"></div>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Specialty Coffee &amp; Artisan Pastries</p>
+        <h1 class="hero__title reveal reveal--delay-1">
+          Your Daily Ritual,<br />
+          <em>Perfectly Brewed.</em>
+        </h1>
+        <p class="hero__sub reveal reveal--delay-2">
+          Slow down. Sip something crafted with care.<br />
+          Find us in the heart of Valencia City, Bukidnon.
+        </p>
+        <div class="hero__actions reveal reveal--delay-3">
+          <a href="#menu" class="btn btn--primary btn--lg">Explore Our Menu</a>
+          <a href="#about" class="btn btn--ghost btn--lg">Our Story</a>
+        </div>
+
+        <div class="hero__badges reveal reveal--delay-4">
+          <div class="badge-pill">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/></svg>
+            Locally Sourced
+          </div>
+          <div class="badge-pill">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+            Open Daily
+          </div>
+          <div class="badge-pill">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 13l4-4 3 3 5-6"/></svg>
+            Single Origin Beans
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll-hint" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ════════════════════ MARQUEE / VIBE BAR ═══════════════════════ -->
+    <div class="marquee-bar" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Espresso</span><span class="sep">✦</span>
+        <span>Cold Brew</span><span class="sep">✦</span>
+        <span>Pour Over</span><span class="sep">✦</span>
+        <span>Latte Art</span><span class="sep">✦</span>
+        <span>Matcha</span><span class="sep">✦</span>
+        <span>Croissants</span><span class="sep">✦</span>
+        <span>Specialty Blends</span><span class="sep">✦</span>
+        <span>Bukidnon Beans</span><span class="sep">✦</span>
+        <span>Espresso</span><span class="sep">✦</span>
+        <span>Cold Brew</span><span class="sep">✦</span>
+        <span>Pour Over</span><span class="sep">✦</span>
+        <span>Latte Art</span><span class="sep">✦</span>
+        <span>Matcha</span><span class="sep">✦</span>
+        <span>Croissants</span><span class="sep">✦</span>
+        <span>Specialty Blends</span><span class="sep">✦</span>
+        <span>Bukidnon Beans</span><span class="sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════ ABOUT ═══════════════════════════ -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+
+        <div class="about__visual reveal">
+          <div class="about__img-stack">
+            <div class="about__img about__img--main">
+              <div class="img-placeholder img-placeholder--coffee">
+                <div class="coffee-cup-art">
+                  <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 45 Q24 85 60 90 Q96 85 95 45 Z" fill="rgba(200,137,58,0.15)" stroke="#C8893A" stroke-width="2"/>
+                    <path d="M95 55 Q112 55 112 68 Q112 80 95 80" stroke="#C8893A" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <rect x="18" y="40" width="84" height="8" rx="4" fill="rgba(200,137,58,0.2)" stroke="#C8893A" stroke-width="1.5"/>
+                    <path d="M45 30 Q45 22 50 20 Q55 18 55 25" stroke="#C8893A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <path d="M60 28 Q60 18 65 16 Q70 14 70 22" stroke="#C8893A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <path d="M40 93 Q60 98 80 93" stroke="#C8893A" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="about__img about__img--small">
+              <div class="img-placeholder img-placeholder--beans">
+                <svg viewBox="0 0 60 60" fill="none">
+                  <ellipse cx="30" cy="30" rx="20" ry="12" fill="rgba(200,137,58,0.2)" stroke="#C8893A" stroke-width="1.5"/>
+                  <path d="M15 28 Q30 35 45 28" stroke="#C8893A" stroke-width="1.2" fill="none"/>
+                  <ellipse cx="15" cy="44" rx="10" ry="6" fill="rgba(200,137,58,0.15)" stroke="#C8893A" stroke-width="1.2"/>
+                  <path d="M8 42 Q15 46 22 42" stroke="#C8893A" stroke-width="1" fill="none"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="about__tag">
+            <strong>Est. 2024</strong>
+            Valencia City, BUK
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="section__eyebrow reveal">Our Story</p>
+          <h2 class="section__title reveal">A Cup Born from<br />Bukidnon's Highlands</h2>
+          <p class="about__body reveal">
+            Valencia Brew Café started with a simple belief — that great coffee deserves a great place
+            to be enjoyed. Nestled in the cool highlands of Valencia City, Bukidnon, we source our
+            beans from local farmers right here in the province and roast them to bring out every
+            note of flavor.
+          </p>
+          <p class="about__body reveal">
+            Whether you're here for a quiet morning with a book, a catch-up with friends, or a
+            creative work session — we've built this space for you. Every cup is made to order,
+            every detail is considered, and every visit is meant to feel like home.
+          </p>
+
+          <div class="about__stats reveal">
+            <div class="about__stat">
+              <strong>100%</strong>
+              <span>Arabica Beans</span>
+            </div>
+            <div class="about__stat">
+              <strong>20+</strong>
+              <span>Menu Items</span>
+            </div>
+            <div class="about__stat">
+              <strong>Local</strong>
+              <span>Farmers First</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ SPECIALTIES ════════════════════════ -->
+    <section class="section specialties">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">What We Do Best</p>
+          <h2 class="section__title reveal">Our Specialties</h2>
+        </div>
+        <div class="specialties__grid">
+          <div class="specialty-card reveal">
+            <div class="specialty-card__icon">☕</div>
+            <h3>Signature Espresso</h3>
+            <p>Our house blend — rich, balanced, with a hint of dark chocolate and caramel from Bukidnon's highlands.</p>
+          </div>
+          <div class="specialty-card reveal">
+            <div class="specialty-card__icon">🧊</div>
+            <h3>Cold Brew Series</h3>
+            <p>Steeped for 18 hours. Silky smooth, naturally sweet, and refreshingly bold without a drop of sugar needed.</p>
+          </div>
+          <div class="specialty-card reveal">
+            <div class="specialty-card__icon">🍵</div>
+            <h3>Matcha Blends</h3>
+            <p>Ceremonial grade matcha paired with oat milk or espresso for a modern, earthy twist on your daily cup.</p>
+          </div>
+          <div class="specialty-card reveal">
+            <div class="specialty-card__icon">🥐</div>
+            <h3>Artisan Pastries</h3>
+            <p>Freshly baked daily — buttery croissants, banana loaf, cheese rolls, and rotating seasonal specials.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ MENU ════════════════════════════ -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">What's Brewing</p>
+          <h2 class="section__title reveal">Our Menu</h2>
+          <p class="section__sub reveal">All prices in Philippine Peso. Sizes: Small · Medium · Large</p>
+        </div>
+
+        <div class="menu__tabs reveal" role="tablist" aria-label="Menu categories">
+          <button class="menu__tab active" role="tab" data-tab="hot" aria-selected="true">Hot Coffee</button>
+          <button class="menu__tab" role="tab" data-tab="cold" aria-selected="false">Cold &amp; Iced</button>
+          <button class="menu__tab" role="tab" data-tab="nonCoffee" aria-selected="false">Non-Coffee</button>
+          <button class="menu__tab" role="tab" data-tab="food" aria-selected="false">Food</button>
+        </div>
+
+        <!-- HOT COFFEE -->
+        <div class="menu__panel active" id="tab-hot" role="tabpanel">
+          <div class="menu__grid">
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Americano</h4>
+                <p>Double shot espresso with hot water. Clean, bold, no-nonsense.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱85</span><span>₱95</span><span>₱110</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Cappuccino</h4>
+                <p>Equal parts espresso, steamed milk, and thick velvety foam.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱95</span><span>₱105</span><span>₱120</span>
+              </div>
+            </div>
+            <div class="menu-item menu-item--featured">
+              <span class="menu-item__badge">House Special</span>
+              <div class="menu-item__info">
+                <h4>Valencia Brew Signature</h4>
+                <p>Our signature double-shot latte with notes of toasted caramel and Bukidnon honey.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱110</span><span>₱125</span><span>₱145</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Flat White</h4>
+                <p>Microfoam milk over a ristretto shot — silky and intense.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱95</span><span>₱110</span><span>₱125</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Cortado</h4>
+                <p>Espresso cut with a small amount of warm milk to reduce acidity.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱90</span><span>—</span><span>—</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Pour Over</h4>
+                <p>Single-origin beans, brewed fresh to order. Ask your barista for today's origin.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱130</span><span>—</span><span>—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLD & ICED -->
+        <div class="menu__panel" id="tab-cold" role="tabpanel">
+          <div class="menu__grid">
+            <div class="menu-item menu-item--featured">
+              <span class="menu-item__badge">New</span>
+              <div class="menu-item__info">
+                <h4>Summer Cold Brew</h4>
+                <p>18-hour steep, served over ice with a float of fresh cream. Naturally smooth.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱110</span><span>₱130</span><span>₱150</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Iced Latte</h4>
+                <p>Espresso over ice, finished with cold milk. Simple and refreshing.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱95</span><span>₱110</span><span>₱125</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Spanish Latte</h4>
+                <p>Espresso with sweetened condensed milk and fresh cold milk over ice.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱100</span><span>₱115</span><span>₱130</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Brown Sugar Shaken</h4>
+                <p>Iced espresso shaken with brown sugar syrup and cinnamon.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱105</span><span>₱120</span><span>₱135</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Iced Americano</h4>
+                <p>Double shot espresso over ice, topped with cold water.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱85</span><span>₱95</span><span>₱110</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Cold Brew Float</h4>
+                <p>Cold brew topped with a scoop of vanilla ice cream. Weekend exclusive.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱145</span><span>—</span><span>—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NON-COFFEE -->
+        <div class="menu__panel" id="tab-nonCoffee" role="tabpanel">
+          <div class="menu__grid">
+            <div class="menu-item menu-item--featured">
+              <span class="menu-item__badge">Bestseller</span>
+              <div class="menu-item__info">
+                <h4>Matcha Oat Latte</h4>
+                <p>Ceremonial grade matcha with creamy oat milk. Earthy, smooth, and beautiful.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱110</span><span>₱125</span><span>₱140</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Hojicha Latte</h4>
+                <p>Roasted green tea with steamed milk — nutty, warm, and lightly sweet.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱105</span><span>₱120</span><span>₱135</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Chocolate Hazelnut</h4>
+                <p>Dark cocoa blended with hazelnut syrup and steamed milk.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱100</span><span>₱115</span><span>₱130</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Strawberry Milk</h4>
+                <p>Fresh strawberry purée with cold milk. A crowd favourite for all ages.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱95</span><span>₱110</span><span>₱125</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Honey Chamomile Tea</h4>
+                <p>Loose-leaf chamomile steeped and finished with local Bukidnon honey.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱80</span><span>₱95</span><span>—</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Sparkling Lemonade</h4>
+                <p>Fresh-squeezed lemon with sparkling water and a hint of rosemary syrup.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱90</span><span>₱100</span><span>—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOD -->
+        <div class="menu__panel" id="tab-food" role="tabpanel">
+          <div class="menu__grid">
+            <div class="menu-item menu-item--featured">
+              <span class="menu-item__badge">Daily Bake</span>
+              <div class="menu-item__info">
+                <h4>Butter Croissant</h4>
+                <p>Classic French-style croissant, laminated in-house. Flaky, golden, perfect.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱65</span><span>—</span><span>—</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Banana Loaf Slice</h4>
+                <p>Moist banana loaf with walnuts and a hint of cinnamon. Pairs perfectly with any latte.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱55</span><span>—</span><span>—</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Ham &amp; Cheese Panini</h4>
+                <p>Toasted sourdough, black forest ham, melted gouda, and Dijon mustard.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱140</span><span>—</span><span>—</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Avocado Toast</h4>
+                <p>Smashed avocado on toasted sourdough with chili flakes, lemon, and sea salt.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱135</span><span>—</span><span>—</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Cheese Roll</h4>
+                <p>Soft pull-apart rolls stuffed generously with melted cheese. Baked fresh daily.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱45</span><span>—</span><span>—</span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-item__info">
+                <h4>Overnight Oats</h4>
+                <p>Oats soaked in oat milk, topped with seasonal fruits and granola.</p>
+              </div>
+              <div class="menu-item__prices">
+                <span>₱120</span><span>—</span><span>—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="menu__note reveal">Menu and pricing subject to change. Ask about seasonal specials and daily bake availability.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ GALLERY ════════════════════════════ -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">@valenciabrew</p>
+          <h2 class="section__title reveal">Life at the Café</h2>
+          <p class="section__sub reveal">Follow us on Instagram for daily brews, behind-the-scenes, and café moments.</p>
+        </div>
+
+        <div class="gallery__grid reveal">
+          <div class="gallery-item gallery-item--tall" data-caption="Morning pour-over ritual 🌄" data-index="0">
+            <div class="gallery-placeholder gp--1">
+              <div class="gp__content">
+                <svg viewBox="0 0 80 80" fill="none"><path d="M15 55 Q20 30 40 25 Q60 30 65 55" stroke="rgba(200,137,58,0.7)" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="40" cy="57" rx="25" ry="6" stroke="rgba(200,137,58,0.5)" stroke-width="1.5" fill="none"/><path d="M35 20 Q35 12 40 10 Q45 8 45 16" stroke="rgba(200,137,58,0.6)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+                <span>Morning Brew</span>
+              </div>
+            </div>
+            <div class="gallery-item__overlay"><p>Morning pour-over ritual 🌄</p></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Latte art by our barista ☕" data-index="1">
+            <div class="gallery-placeholder gp--2">
+              <div class="gp__content">
+                <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="28" stroke="rgba(200,137,58,0.5)" stroke-width="1.5" fill="rgba(200,137,58,0.05)"/><path d="M28 40 Q34 30 40 35 Q46 30 52 40" stroke="rgba(200,137,58,0.7)" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="40" cy="44" r="4" stroke="rgba(200,137,58,0.5)" stroke-width="1.2" fill="none"/></svg>
+                <span>Latte Art</span>
+              </div>
+            </div>
+            <div class="gallery-item__overlay"><p>Latte art by our barista ☕</p></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Freshly baked daily 🥐" data-index="2">
+            <div class="gallery-placeholder gp--3">
+              <div class="gp__content">
+                <svg viewBox="0 0 80 80" fill="none"><path d="M20 50 Q30 35 40 38 Q50 35 60 50 Q55 58 40 60 Q25 58 20 50Z" stroke="rgba(200,137,58,0.7)" stroke-width="1.5" fill="rgba(200,137,58,0.08)"/><path d="M28 46 Q34 40 40 42 Q46 40 52 46" stroke="rgba(200,137,58,0.5)" stroke-width="1" fill="none" stroke-linecap="round"/></svg>
+                <span>Fresh Bakes</span>
+              </div>
+            </div>
+            <div class="gallery-item__overlay"><p>Freshly baked daily 🥐</p></div>
+          </div>
+
+          <div class="gallery-item gallery-item--wide" data-caption="Our cozy corner spot 🛋" data-index="3">
+            <div class="gallery-placeholder gp--4">
+              <div class="gp__content">
+                <svg viewBox="0 0 120 80" fill="none"><rect x="10" y="45" width="100" height="25" rx="6" stroke="rgba(200,137,58,0.5)" stroke-width="1.5" fill="rgba(200,137,58,0.06)"/><rect x="15" y="38" width="35" height="15" rx="5" stroke="rgba(200,137,58,0.5)" stroke-width="1.5" fill="rgba(200,137,58,0.06)"/><rect x="70" y="38" width="35" height="15" rx="5" stroke="rgba(200,137,58,0.5)" stroke-width="1.5" fill="rgba(200,137,58,0.06)"/><rect x="45" y="20" width="30" height="20" rx="4" stroke="rgba(200,137,58,0.4)" stroke-width="1.2" fill="rgba(200,137,58,0.05)"/></svg>
+                <span>Cozy Interior</span>
+              </div>
+            </div>
+            <div class="gallery-item__overlay"><p>Our cozy corner spot 🛋</p></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Cold brew season is here 🧊" data-index="4">
+            <div class="gallery-placeholder gp--5">
+              <div class="gp__content">
+                <svg viewBox="0 0 80 80" fill="none"><rect x="25" y="20" width="30" height="45" rx="6" stroke="rgba(200,137,58,0.6)" stroke-width="1.5" fill="rgba(200,137,58,0.06)"/><path d="M30 25 L50 25" stroke="rgba(200,137,58,0.3)" stroke-width="1" stroke-linecap="round"/><path d="M30 50 L50 50" stroke="rgba(200,137,58,0.4)" stroke-width="1" stroke-linecap="round"/><path d="M32 35 L35 42 L40 30 L45 45 L48 35" stroke="rgba(200,137,58,0.5)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Cold Brew</span>
+              </div>
+            </div>
+            <div class="gallery-item__overlay"><p>Cold brew season is here 🧊</p></div>
+          </div>
+
+          <div class="gallery-item" data-caption="Sunday morning ritual ☀️" data-index="5">
+            <div class="gallery-placeholder gp--6">
+              <div class="gp__content">
+                <svg viewBox="0 0 80 80" fill="none"><circle cx="40" cy="38" r="14" stroke="rgba(200,137,58,0.6)" stroke-width="1.5" fill="rgba(200,137,58,0.08)"/><path d="M40 18 L40 14M40 62 L40 58M20 38 L16 38M64 38 L60 38M26 24 L23 21M57 24 L54 21M26 52 L23 55M57 52 L54 55" stroke="rgba(200,137,58,0.4)" stroke-width="1.5" stroke-linecap="round"/></svg>
+                <span>Sunny Mornings</span>
+              </div>
+            </div>
+            <div class="gallery-item__overlay"><p>Sunday morning ritual ☀️</p></div>
+          </div>
+        </div>
+
+        <div class="gallery__cta reveal">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn--outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Follow @valenciabrew
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ HOURS & LOCATION ══════════════════════ -->
+    <section class="section hours" id="hours">
+      <div class="hours__bg" aria-hidden="true"></div>
+      <div class="container hours__grid">
+
+        <div class="hours__card reveal">
+          <p class="section__eyebrow">Opening Hours</p>
+          <h2 class="section__title">When to Find Us</h2>
+
+          <div class="hours__list">
+            <div class="hours__row">
+              <span class="hours__day">Monday</span>
+              <span class="hours__divider"></span>
+              <span class="hours__time">7:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours__row">
+              <span class="hours__day">Tuesday</span>
+              <span class="hours__divider"></span>
+              <span class="hours__time">7:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours__row">
+              <span class="hours__day">Wednesday</span>
+              <span class="hours__divider"></span>
+              <span class="hours__time">7:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours__row">
+              <span class="hours__day">Thursday</span>
+              <span class="hours__divider"></span>
+              <span class="hours__time">7:00 AM – 8:00 PM</span>
+            </div>
+            <div class="hours__row">
+              <span class="hours__day">Friday</span>
+              <span class="hours__divider"></span>
+              <span class="hours__time">7:00 AM – 10:00 PM</span>
+            </div>
+            <div class="hours__row hours__row--highlight">
+              <span class="hours__day">Saturday</span>
+              <span class="hours__divider"></span>
+              <span class="hours__time">8:00 AM – 10:00 PM</span>
+            </div>
+            <div class="hours__row hours__row--highlight">
+              <span class="hours__day">Sunday</span>
+              <span class="hours__divider"></span>
+              <span class="hours__time">8:00 AM – 6:00 PM</span>
+            </div>
+          </div>
+
+          <div class="hours__note">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="14" height="14"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+            Kitchen closes 30 minutes before closing time.
+          </div>
+        </div>
+
+        <div class="location__card reveal">
+          <p class="section__eyebrow">Location</p>
+          <h2 class="section__title">Come Visit Us</h2>
+
+          <div class="location__map-placeholder">
+            <svg viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+              <rect width="280" height="180" fill="rgba(200,137,58,0.05)"/>
+              <line x1="0" y1="60" x2="280" y2="60" stroke="rgba(200,137,58,0.1)" stroke-width="1"/>
+              <line x1="0" y1="120" x2="280" y2="120" stroke="rgba(200,137,58,0.1)" stroke-width="1"/>
+              <line x1="70" y1="0" x2="70" y2="180" stroke="rgba(200,137,58,0.1)" stroke-width="1"/>
+              <line x1="140" y1="0" x2="140" y2="180" stroke="rgba(200,137,58,0.1)" stroke-width="1"/>
+              <line x1="210" y1="0" x2="210" y2="180" stroke="rgba(200,137,58,0.1)" stroke-width="1"/>
+              <circle cx="140" cy="90" r="10" fill="rgba(200,137,58,0.2)" stroke="#C8893A" stroke-width="1.5"/>
+              <path d="M140 70 Q140 55 150 50 Q165 48 165 63 Q165 78 140 90 Q115 78 115 63 Q115 48 130 50 Q140 55 140 70Z" fill="rgba(200,137,58,0.15)" stroke="#C8893A" stroke-width="1.5"/>
+              <circle cx="140" cy="68" r="5" fill="#C8893A"/>
+              <text x="140" y="115" text-anchor="middle" fill="rgba(200,137,58,0.6)" font-size="8" font-family="sans-serif">Valencia City, Bukidnon</text>
+            </svg>
+          </div>
+
+          <div class="location__details">
+            <div class="location__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Poblacion, Valencia City, Bukidnon 8709</span>
+            </div>
+            <div class="location__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>+63 912 345 6789</span>
+            </div>
+            <div class="location__item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>hello@valenciabrew.ph</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════ TESTIMONIALS ════════════════════════ -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">What Guests Say</p>
+          <h2 class="section__title reveal">Love from Our Community</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"The Valencia Brew Signature latte is the best coffee I've had in Bukidnon. The space is beautiful and the baristas are so friendly. I come here every single morning."</p>
+            <div class="testimonial-card__author">
+              <div class="author-avatar">MR</div>
+              <div>
+                <strong>Maria Reyes</strong>
+                <span>Regular Customer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Perfect place to work remotely. Fast WiFi, great playlist, and the cold brew keeps me going all afternoon. Honestly my second home at this point."</p>
+            <div class="testimonial-card__author">
+              <div class="author-avatar">JC</div>
+              <div>
+                <strong>James Cruz</strong>
+                <span>Freelance Designer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p>"Brought my family here on a Sunday and we all loved it! The pastries were so fresh and the matcha oat latte converted my tea-only mom into a café regular. 10/10."</p>
+            <div class="testimonial-card__author">
+              <div class="author-avatar">AL</div>
+              <div>
+                <strong>Ana Lim</strong>
+                <span>Valencia City Local</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ LOYALTY PROGRAM ═══════════════════════ -->
+    <section class="loyalty">
+      <div class="container loyalty__inner">
+        <div class="loyalty__text reveal">
+          <p class="section__eyebrow">Brew Rewards</p>
+          <h2>Your 10th Cup is On Us</h2>
+          <p>Join the Valencia Brew Rewards Program. Every purchase earns a stamp. Collect 10 stamps and get a free drink of your choice — no expiry, no fuss.</p>
+          <a href="#contact" class="btn btn--light">Get Your Loyalty Card</a>
+        </div>
+        <div class="loyalty__visual reveal" aria-hidden="true">
+          <div class="loyalty-card">
+            <div class="loyalty-card__header">
+              <span class="loyalty-card__brand">Valencia Brew</span>
+              <span class="loyalty-card__sub">REWARDS CARD</span>
+            </div>
+            <div class="loyalty-card__stamps">
+              <div class="stamp stamp--filled">☕</div>
+              <div class="stamp stamp--filled">☕</div>
+              <div class="stamp stamp--filled">☕</div>
+              <div class="stamp stamp--filled">☕</div>
+              <div class="stamp stamp--filled">☕</div>
+              <div class="stamp">☕</div>
+              <div class="stamp">☕</div>
+              <div class="stamp">☕</div>
+              <div class="stamp">☕</div>
+              <div class="stamp stamp--free">🎁</div>
+            </div>
+            <p class="loyalty-card__footer">5 of 10 stamps collected</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ CONTACT ════════════════════════════ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+
+        <div class="contact__info">
+          <p class="section__eyebrow reveal">Table Reservations</p>
+          <h2 class="section__title reveal">Reserve Your Spot</h2>
+          <p class="contact__body reveal">
+            Planning a visit? Reserve a table in advance and we'll have everything ready for you.
+            Walk-ins always welcome, but reservations guarantee your favourite seat.
+          </p>
+          <div class="contact__perks reveal">
+            <div class="perk">✓ Free welcome drink for reservations of 4+</div>
+            <div class="perk">✓ Available for private events &amp; team gatherings</div>
+            <div class="perk">✓ Birthday surprises upon request</div>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="reserveForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name">Full Name</label>
+              <input type="text" id="res-name" name="name" placeholder="Juan dela Cruz" required />
+            </div>
+            <div class="form-group">
+              <label for="res-guests">Party Size</label>
+              <select id="res-guests" name="guests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5+">5+ Guests</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Date</label>
+              <input type="date" id="res-date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="res-time">Preferred Time</label>
+              <select id="res-time" name="time">
+                <option>7:00 AM</option>
+                <option>8:00 AM</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="res-note">Special Requests (optional)</label>
+            <textarea id="res-note" name="note" rows="3" placeholder="e.g. birthday celebration, dietary needs, preferred seating..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Confirm Reservation</button>
+          <p class="form__note">We'll confirm your reservation via phone or message within 2 hours.</p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="logo-mark" style="color: var(--accent);" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none" width="32" height="32"><circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/><path d="M12 26 Q14 18 20 16 Q26 18 28 26" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><ellipse cx="20" cy="27" rx="8" ry="2.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M26 16 Q30 12 28 8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Valencia Brew</span>
+            <span class="logo-sub">CAFÉ</span>
+          </div>
+        </div>
+        <p>Specialty coffee crafted with care,<br />in the heart of Valencia City, Bukidnon.</p>
+        <div class="footer__socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__nav">
+        <h4>Explore</h4>
+        <a href="#about">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#hours">Hours &amp; Location</a>
+        <a href="#contact">Reservations</a>
+      </nav>
+
+      <div class="footer__info">
+        <h4>Contact</h4>
+        <p>Poblacion, Valencia City<br />Bukidnon 8709</p>
+        <p>+63 912 345 6789</p>
+        <p>hello@valenciabrew.ph</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Valencia Brew Café. All rights reserved.</p>
+        <p>Website by <a href="../../index.html" class="footer__credit">WebNest Studio</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox__content" id="lightboxContent"></div>
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
