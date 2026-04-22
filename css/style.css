@@ -584,6 +584,37 @@ h1, h2, h3, h4 {
 }
 
 /* ═══════════════════════════════════════════════
+   SECURITY
+   ═══════════════════════════════════════════════ */
+.security {
+  background: linear-gradient(180deg, transparent 0%, var(--bg-2) 30%, var(--bg-2) 70%, transparent 100%);
+}
+
+.security__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.security-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+}
+
+.security-card h3 {
+  font-size: 0.98rem;
+  margin-bottom: 0.5rem;
+}
+
+.security-card p {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════════
    WHY US
    ═══════════════════════════════════════════════ */
 .why-us {
@@ -1036,6 +1067,14 @@ a.contact__item:hover { border-color: var(--border); }
   resize: vertical;
   outline: none;
 }
+.hp-field {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
 .form-group input::placeholder,
 .form-group textarea::placeholder { color: var(--text-faint); }
 .form-group input:focus,
@@ -1048,6 +1087,54 @@ a.contact__item:hover { border-color: var(--border); }
   font-size: 0.78rem;
   color: var(--text-faint);
   text-align: center;
+}
+
+.captcha-card {
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  background: rgba(10, 15, 30, 0.55);
+  padding: 0.85rem;
+}
+
+.captcha-card__label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+
+.captcha-card__question {
+  font-size: 0.94rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.captcha-card__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.55rem;
+}
+
+.captcha-card__row input {
+  background: var(--bg);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  padding: 0.75rem 0.85rem;
+  outline: none;
+}
+
+.captcha-card__row input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.captcha-card__refresh {
+  min-width: 76px;
+  justify-content: center;
 }
 
 /* ═══════════════════════════════════════════════

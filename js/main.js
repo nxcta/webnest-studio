@@ -243,8 +243,40 @@ if (heroCanvas && !prefersReducedMotion) {
    Opens the user's email client pre-filled with
    the form data since this is a static site.      */
 const contactForm = document.getElementById('contactForm');
+let captchaToken = '';
+
+async function refreshCaptchaChallenge() {
+  const questionEl = document.getElementById('captchaQuestion');
+  const answerEl = document.getElementById('captchaAnswer');
+  if (!questionEl || !answerEl) return;
+
+  questionEl.textContent = 'Loading challenge...';
+  answerEl.value = '';
+  captchaToken = '';
+
+  try {
+    const res = await fetch('/api/security/captcha', { method: 'GET' });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data?.token || !data?.question) {
+      questionEl.textContent = 'Unable to load challenge. Please refresh.';
+      return;
+    }
+    captchaToken = String(data.token);
+    questionEl.textContent = `Solve: ${data.question}`;
+  } catch {
+    questionEl.textContent = 'Unable to load challenge. Please refresh.';
+  }
+}
 
 if (contactForm) {
+  const startedAtEl = document.getElementById('formStartedAt');
+  const trapEl = document.getElementById('websiteTrap');
+  const captchaAnswerEl = document.getElementById('captchaAnswer');
+  const captchaRefreshBtn = document.getElementById('captchaRefresh');
+  if (startedAtEl) startedAtEl.value = String(Date.now());
+  if (captchaRefreshBtn) captchaRefreshBtn.addEventListener('click', () => refreshCaptchaChallenge());
+  refreshCaptchaChallenge();
+
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -252,22 +284,56 @@ if (contactForm) {
     const email    = this.email.value.trim();
     const business = this.business.value.trim();
     const message  = this.message.value.trim();
+    const trapValue = trapEl ? trapEl.value.trim() : '';
+    const startedAt = Number(startedAtEl ? startedAtEl.value : 0);
+    const formAgeMs = Date.now() - (Number.isFinite(startedAt) ? startedAt : 0);
+    const captchaAnswer = captchaAnswerEl ? captchaAnswerEl.value.trim() : '';
 
     if (!name || !email || !message) {
       showFormFeedback('Please fill in your name, email, and message.', 'error');
       return;
     }
+    if (trapValue) {
+      showFormFeedback('Security check failed. Please refresh and try again.', 'error');
+      return;
+    }
+    if (!startedAt || formAgeMs < 3500) {
+      showFormFeedback('Please take a moment to complete the form, then try again.', 'error');
+      return;
+    }
+    if (!captchaToken || !captchaAnswer) {
+      showFormFeedback('Please complete the security challenge before sending.', 'error');
+      return;
+    }
 
-    const subject = encodeURIComponent(`Website Inquiry from ${name}${business ? ' — ' + business : ''}`);
-    const body    = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nBusiness/Project: ${business || 'N/A'}\n\n${message}`
-    );
-    const mailto  = `mailto:webneststudiobkdn@gmail.com?subject=${subject}&body=${body}`;
+    fetch('/api/security/captcha', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ token: captchaToken, answer: captchaAnswer }),
+    })
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          showFormFeedback((data && data.error) ? data.error : 'Security check failed. Please try again.', 'error');
+          refreshCaptchaChallenge();
+          return;
+        }
 
-    window.location.href = mailto;
+        const subject = encodeURIComponent(`Website Inquiry from ${name}${business ? ' — ' + business : ''}`);
+        const body    = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nBusiness/Project: ${business || 'N/A'}\n\n${message}`
+        );
+        const mailto  = `mailto:webneststudiobkdn@gmail.com?subject=${subject}&body=${body}`;
 
-    showFormFeedback('Opening your email app... I\'ll get back to you within 24 hours!', 'success');
-    this.reset();
+        window.location.href = mailto;
+        showFormFeedback('Security check passed. Opening your email app now.', 'success');
+        this.reset();
+        if (startedAtEl) startedAtEl.value = String(Date.now());
+        refreshCaptchaChallenge();
+      })
+      .catch(() => {
+        showFormFeedback('Unable to verify the security challenge right now. Please try again.', 'error');
+      });
   });
 }
 

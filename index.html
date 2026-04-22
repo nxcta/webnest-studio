@@ -24,6 +24,7 @@
       <nav class="navbar__nav" id="navMenu" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#security">Security</a>
         <a href="#why-us">Why Me</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
@@ -182,6 +183,46 @@
             <p>Ongoing updates, content changes, and technical support to keep your website running smoothly after launch.</p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ SECURITY SERVICES ═══════════════════════════ -->
+    <section class="section security" id="security">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">Security Services</p>
+          <h2 class="section__title reveal">Built for Trust,<br />Hardened for Growth</h2>
+          <p class="section__sub reveal">
+            Security is part of the build from day one, not an afterthought after launch.
+          </p>
+        </div>
+
+        <div class="security__grid">
+          <article class="security-card reveal interactive-card">
+            <h3>Custom CAPTCHA Challenge (Branded)</h3>
+            <p>Brand-matched challenge flow to reduce spam and low-quality submissions without hurting legitimate users.</p>
+          </article>
+          <article class="security-card reveal interactive-card">
+            <h3>Honeypot + Timing Checks</h3>
+            <p>Hidden trap fields and submission timing validation to catch bots before they reach your inbox.</p>
+          </article>
+          <article class="security-card reveal interactive-card">
+            <h3>Rate Limiting & Abuse Throttling</h3>
+            <p>Endpoint-level request controls to protect your forms and APIs from brute-force and flooding attempts.</p>
+          </article>
+          <article class="security-card reveal interactive-card">
+            <h3>API Validation & Sanitization</h3>
+            <p>Strict payload checks, defensive parsing, and safe error responses to reduce attack surface.</p>
+          </article>
+          <article class="security-card reveal interactive-card">
+            <h3>Security Headers + HTTPS Hardening</h3>
+            <p>Production-grade browser headers and transport security defaults to block common web attack vectors.</p>
+          </article>
+          <article class="security-card reveal interactive-card">
+            <h3>Monitoring + Incident Response</h3>
+            <p>Lightweight security monitoring recommendations with a clear response path when suspicious activity appears.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -472,6 +513,8 @@
           </div>
 
           <form class="contact__form reveal" id="contactForm" novalidate>
+            <input type="text" id="websiteTrap" name="website_trap" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="hidden" id="formStartedAt" name="form_started_at" />
             <div class="form-group">
               <label for="name">Your Name</label>
               <input type="text" id="name" name="name" placeholder="Juan dela Cruz" required />
@@ -487,6 +530,14 @@
             <div class="form-group">
               <label for="message">Tell Me About Your Project</label>
               <textarea id="message" name="message" rows="5" placeholder="Describe your vision, goals, or any questions you have..." required></textarea>
+            </div>
+            <div class="captcha-card" id="captchaCard" aria-live="polite">
+              <p class="captcha-card__label">WebNest Security Check</p>
+              <p class="captcha-card__question" id="captchaQuestion">Loading challenge...</p>
+              <div class="captcha-card__row">
+                <input type="text" id="captchaAnswer" name="captcha_answer" inputmode="numeric" placeholder="Your answer" required />
+                <button type="button" class="btn btn--ghost captcha-card__refresh" id="captchaRefresh">New</button>
+              </div>
             </div>
             <button type="submit" class="btn btn--primary btn--full">
               <span class="btn__text">Send Message</span>
@@ -521,6 +572,7 @@
         <h4>Navigate</h4>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#security">Security</a>
         <a href="#why-us">Why Me</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
