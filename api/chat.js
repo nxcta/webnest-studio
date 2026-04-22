@@ -3,6 +3,15 @@ const path = require('path');
 const crypto = require('crypto');
 
 const MEMORY_BUCKETS = new Map();
+const RESPONSE_CACHE = new Map();
+const CACHE_TTL_MS = 1000 * 60 * 30; // 30 minutes
+
+const STOPWORDS = new Set([
+  'a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'can', 'do', 'for', 'from',
+  'get', 'how', 'i', 'if', 'in', 'is', 'it', 'me', 'my', 'of', 'on', 'or',
+  'please', 'the', 'to', 'us', 'we', 'what', 'when', 'where', 'who', 'with',
+  'you', 'your'
+]);
 
 function getIp(req) {
   const xf = req.headers['x-forwarded-for'];
@@ -26,6 +35,75 @@ function readKnowledge() {
   } catch {
     return null;
   }
+}
+
+function normalizeText(input) {
+  return String(input || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function tokenize(input) {
+  return normalizeText(input)
+    .split(' ')
+    .filter(Boolean)
+    .filter(token => token.length > 1 && !STOPWORDS.has(token));
+}
+
+function jaccardSimilarity(aTokens, bTokens) {
+  if (!aTokens.length || !bTokens.length) return 0;
+  const a = new Set(aTokens);
+  const b = new Set(bTokens);
+  let intersection = 0;
+  a.forEach(token => {
+    if (b.has(token)) intersection += 1;
+  });
+  const union = new Set([...a, ...b]).size;
+  return union ? intersection / union : 0;
+}
+
+function maybeFaqAnswer(knowledge, userMessage) {
+  const faqs = Array.isArray(knowledge?.faq) ? knowledge.faq : [];
+  if (!faqs.length) return null;
+
+  const normalizedUser = normalizeText(userMessage);
+  const userTokens = tokenize(userMessage);
+  if (!normalizedUser || !userTokens.length) return null;
+
+  let best = null;
+  for (const item of faqs) {
+    const q = String(item?.q || '').trim();
+    const a = String(item?.a || '').trim();
+    if (!q || !a) continue;
+
+    const normalizedQ = normalizeText(q);
+    const qTokens = tokenize(q);
+    const score = jaccardSimilarity(userTokens, qTokens);
+    const directContains = normalizedQ.includes(normalizedUser) || normalizedUser.includes(normalizedQ);
+    const weightedScore = directContains ? Math.max(score, 0.99) : score;
+
+    if (!best || weightedScore > best.score) {
+      best = { score: weightedScore, answer: a };
+    }
+  }
+
+  return best && best.score >= 0.34 ? best.answer : null;
+}
+
+function getCachedReply(cacheKey) {
+  const cached = RESPONSE_CACHE.get(cacheKey);
+  if (!cached) return null;
+  if ((Date.now() - cached.createdAt) > CACHE_TTL_MS) {
+    RESPONSE_CACHE.delete(cacheKey);
+    return null;
+  }
+  return cached.reply;
+}
+
+function setCachedReply(cacheKey, reply) {
+  RESPONSE_CACHE.set(cacheKey, { reply, createdAt: Date.now() });
 }
 
 function systemPrompt(knowledge) {
@@ -137,11 +215,19 @@ module.exports = async function handler(req, res) {
 
   const knowledge = readKnowledge();
   const sys = systemPrompt(knowledge);
+  const normalizedMessage = normalizeText(message);
+  const cacheKey = crypto.createHash('sha256').update(normalizedMessage).digest('hex').slice(0, 24);
+
+  const faqReply = maybeFaqAnswer(knowledge, message);
+  if (faqReply) return json(res, 200, { reply: faqReply, source: 'faq' });
+
+  const cachedReply = getCachedReply(cacheKey);
+  if (cachedReply) return json(res, 200, { reply: cachedReply, source: 'cache' });
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    return json(res, 500, {
-      error: 'Chatbot is not configured yet. Set OPENAI_API_KEY in Vercel environment variables.',
+    return json(res, 503, {
+      error: 'Chatbot AI is temporarily unavailable right now. Please use the contact form or email webneststudiobkdn@gmail.com for help.',
     });
   }
 
@@ -195,7 +281,8 @@ module.exports = async function handler(req, res) {
       ? data.output_text.trim()
       : '';
 
-    return json(res, 200, { reply: reply || "Sorry — I couldn't generate a response right now." });
+    if (reply) setCachedReply(cacheKey, reply);
+    return json(res, 200, { reply: reply || "Sorry — I couldn't generate a response right now.", source: 'llm' });
   } catch {
     return json(res, 502, { error: 'Chat service is temporarily unavailable.' });
   }
