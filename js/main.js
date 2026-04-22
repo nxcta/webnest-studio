@@ -123,7 +123,7 @@ if (contactForm) {
 
     window.location.href = mailto;
 
-    showFormFeedback('Opening your email app... We\'ll get back to you within 24 hours!', 'success');
+    showFormFeedback('Opening your email app... I\'ll get back to you within 24 hours!', 'success');
     this.reset();
   });
 }
@@ -204,7 +204,7 @@ function showFormFeedback(text, type) {
       renderChips();
       if (!hasWelcomed) {
         hasWelcomed = true;
-        appendMessage('bot', 'Hi! I’m the WebNest site guide. Ask me about services, pricing, timelines, or how to contact us.');
+        appendMessage('bot', 'Hi! I’m the WebNest site guide. Ask me about services, pricing, timelines, or how to contact me.');
       }
       setTimeout(() => input.focus(), 0);
     }

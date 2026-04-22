@@ -173,6 +173,20 @@ module.exports = async function handler(req, res) {
 
     const data = await r.json().catch(() => ({}));
     if (!r.ok) {
+      const rawMsg = String(data?.error?.message || '').toLowerCase();
+      const rawCode = String(data?.error?.code || '').toLowerCase();
+      const isQuotaError =
+        rawCode.includes('insufficient_quota') ||
+        rawMsg.includes('exceeded your current quota') ||
+        rawMsg.includes('insufficient_quota') ||
+        rawMsg.includes('billing');
+
+      if (isQuotaError) {
+        return json(res, 503, {
+          error: 'Our chatbot is temporarily unavailable due to API quota limits. Please try again later.',
+        });
+      }
+
       const err = data?.error?.message || 'Upstream model error';
       return json(res, 502, { error: err });
     }
