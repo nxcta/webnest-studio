@@ -34,13 +34,23 @@ function systemPrompt(knowledge) {
   const location = knowledge?.brand?.location ? `Location: ${knowledge.brand.location}\n` : '';
   const services = Array.isArray(knowledge?.services) ? knowledge.services.map(s => `- ${s}`).join('\n') : '';
   const email = knowledge?.contact?.email ? knowledge.contact.email : '';
+  const nextStep = knowledge?.contact?.best_next_step ? knowledge.contact.best_next_step : '';
+  const tone = knowledge?.assistant_prefs?.tone || 'professional';
+  const pricingStyle = knowledge?.assistant_prefs?.pricing_style || 'quote_only';
+  const primaryCta = knowledge?.assistant_prefs?.primary_cta || 'both_equal';
 
   return [
     `You are a helpful, concise chatbot embedded on ${brand}'s website.`,
     safe,
     'Rules:',
+    `- Tone must be ${tone}, confident, and concise.`,
     '- Answer only questions related to this website/business (services, process, pricing/timelines at a high level, and contact info).',
-    '- If asked for exact pricing or anything not specified, ask 1-2 clarifying questions and suggest contacting via the site.',
+    pricingStyle === 'quote_only'
+      ? '- Never provide fixed or estimated price numbers. Explain that pricing is custom and invite the user to request a quote.'
+      : '- If asked for exact pricing or anything not specified, ask 1-2 clarifying questions and suggest contacting via the site.',
+    primaryCta === 'both_equal'
+      ? '- When suggesting next steps, offer both the website Contact form and email equally.'
+      : '- Keep calls-to-action aligned with the configured primary contact method.',
     '- If asked for anything unrelated, say you can only help with WebNest Studio and suggest what you can answer.',
     '- Never claim you performed actions (calls, emails, bookings).',
     '- Keep replies short (2-6 sentences). Use bullet points only when it improves clarity.',
@@ -48,6 +58,7 @@ function systemPrompt(knowledge) {
     location ? location.trimEnd() : '',
     services ? `Services:\n${services}` : '',
     email ? `Contact email: ${email}` : '',
+    nextStep ? `Preferred next step: ${nextStep}` : '',
     '',
     knowledge?.brand?.positioning ? `About: ${knowledge.brand.positioning}` : ''
   ].filter(Boolean).join('\n');

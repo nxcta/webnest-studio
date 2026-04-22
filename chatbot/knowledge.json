@@ -6,7 +6,12 @@
   },
   "contact": {
     "email": "webneststudiobkdn@gmail.com",
-    "best_next_step": "Use the Contact form on the site or email us to get a quote."
+    "best_next_step": "Use the Contact form on the site or email us to request a custom quote."
+  },
+  "assistant_prefs": {
+    "tone": "professional",
+    "pricing_style": "quote_only",
+    "primary_cta": "both_equal"
   },
   "services": [
     "Website Design (custom UI/UX)",
@@ -38,7 +43,7 @@
     },
     {
       "q": "How much does a website cost?",
-      "a": "Pricing depends on the number of pages, features, and timeline. Send us your business/project details and we’ll provide a clear quote."
+      "a": "We provide custom quotes based on scope, pages, features, and timeline. Share your project details through the Contact form or by email, and we’ll prepare a clear proposal."
     },
     {
       "q": "How long does it take to build a website?",
@@ -46,7 +51,27 @@
     },
     {
       "q": "How can I contact you?",
-      "a": "You can use the Contact section on this page or email us at webneststudiobkdn@gmail.com."
+      "a": "You can reach us through the Contact form on this page or email us directly at webneststudiobkdn@gmail.com."
+    },
+    {
+      "q": "Can you give me exact pricing right now?",
+      "a": "We do not publish fixed package prices because each build is custom. Share your requirements, and we’ll send a tailored quote via the Contact form or email."
+    },
+    {
+      "q": "What should I include when asking for a quote?",
+      "a": "Please include your business type, target audience, preferred number of pages, key features, design references, and target launch date so we can scope accurately."
+    },
+    {
+      "q": "Do you work with clients outside Valencia City?",
+      "a": "Yes. While we are based in Valencia City, Bukidnon, we can work remotely with clients in other locations."
+    },
+    {
+      "q": "What makes WebNest Studio different?",
+      "a": "We focus on clean, modern, hand-coded websites with clear communication, practical timelines, and work tailored to each business."
+    },
+    {
+      "q": "What happens after launch?",
+      "a": "After launch, we can continue with maintenance and support for updates, minor changes, and technical assistance as needed."
     },
     {
       "q": "What do you need from me to start?",
