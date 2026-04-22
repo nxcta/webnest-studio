@@ -5,6 +5,7 @@
 /* ── Footer Year ──────────────────────────────── */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+document.body.classList.add('page-ready');
 
 /* ── Navbar: scroll state ─────────────────────── */
 const navbar = document.getElementById('navbar');
@@ -95,6 +96,148 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(section => sectionObserver.observe(section));
+
+/* ── Client portal preview tabs ───────────────── */
+const portalTabs = Array.from(document.querySelectorAll('.portal-tab'));
+const portalPanels = Array.from(document.querySelectorAll('.portal-tab-panel'));
+
+if (portalTabs.length && portalPanels.length) {
+  portalTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-portal-tab');
+      if (!target) return;
+      portalTabs.forEach(item => item.classList.toggle('is-active', item === tab));
+      portalPanels.forEach(panel => {
+        panel.classList.toggle('is-active', panel.getAttribute('data-portal-panel') === target);
+      });
+    });
+  });
+}
+
+/* ── Premium micro-interactions ───────────────── */
+const interactiveCards = Array.from(document.querySelectorAll('.interactive-card'));
+const magneticButtons = Array.from(document.querySelectorAll('.btn'));
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!prefersReducedMotion) {
+  interactiveCards.forEach(card => {
+    card.addEventListener('pointermove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const dx = (e.clientX - rect.left) / rect.width - 0.5;
+      const dy = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.transform = `perspective(900px) rotateX(${(-dy * 4).toFixed(2)}deg) rotateY(${(dx * 5).toFixed(2)}deg) translateY(-2px)`;
+    });
+    card.addEventListener('pointerleave', () => {
+      card.style.transform = '';
+    });
+  });
+
+  magneticButtons.forEach(btn => {
+    btn.addEventListener('pointermove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const dx = (e.clientX - rect.left) / rect.width - 0.5;
+      const dy = (e.clientY - rect.top) / rect.height - 0.5;
+      btn.style.transform = `translate(${(dx * 8).toFixed(1)}px, ${(dy * 6).toFixed(1)}px)`;
+    });
+    btn.addEventListener('pointerleave', () => {
+      btn.style.transform = '';
+    });
+  });
+}
+
+/* ── Lightweight 3D hero canvas ──────────────── */
+const heroCanvas = document.getElementById('heroWebgl');
+if (heroCanvas && !prefersReducedMotion) {
+  const ctx = heroCanvas.getContext('2d');
+  if (ctx) {
+    const points = [];
+    const pointCount = 56;
+    let width = 0;
+    let height = 0;
+    let raf = null;
+    let t = 0;
+
+    for (let i = 0; i < pointCount; i += 1) {
+      points.push({
+        theta: (Math.PI * 2 * i) / pointCount,
+        radius: 0.35 + Math.random() * 0.32,
+        z: -0.9 + Math.random() * 1.8,
+        speed: 0.25 + Math.random() * 0.45,
+      });
+    }
+
+    function resizeHeroCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      width = heroCanvas.clientWidth || window.innerWidth;
+      height = heroCanvas.clientHeight || Math.max(420, window.innerHeight * 0.7);
+      heroCanvas.width = Math.round(width * dpr);
+      heroCanvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function project(x, y, z, fov) {
+      const scale = fov / (fov + z);
+      return {
+        x: x * scale + width * 0.68,
+        y: y * scale + height * 0.5,
+        scale,
+      };
+    }
+
+    function draw() {
+      t += 0.014;
+      ctx.clearRect(0, 0, width, height);
+
+      const projected = points.map((p, idx) => {
+        const angle = p.theta + t * p.speed;
+        const x = Math.cos(angle * 1.3 + Math.sin(t + idx * 0.06)) * (width * 0.2 * p.radius);
+        const y = Math.sin(angle * 1.05) * (height * 0.22 * p.radius) + Math.sin(t * 0.8 + idx) * 6;
+        const z = p.z * 120 + Math.cos(t + idx * 0.12) * 22;
+        return project(x, y, z, 420);
+      });
+
+      for (let i = 0; i < projected.length; i += 1) {
+        for (let j = i + 1; j < projected.length; j += 1) {
+          const dx = projected[i].x - projected[j].x;
+          const dy = projected[i].y - projected[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 115) {
+            const alpha = (1 - dist / 115) * 0.22;
+            ctx.strokeStyle = `rgba(123, 179, 255, ${alpha.toFixed(3)})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(projected[i].x, projected[i].y);
+            ctx.lineTo(projected[j].x, projected[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+
+      projected.forEach((p) => {
+        const size = Math.max(1.2, p.scale * 2.6);
+        ctx.fillStyle = 'rgba(123, 179, 255, 0.55)';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      raf = window.requestAnimationFrame(draw);
+    }
+
+    resizeHeroCanvas();
+    draw();
+
+    window.addEventListener('resize', resizeHeroCanvas, { passive: true });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && raf) {
+        cancelAnimationFrame(raf);
+        raf = null;
+      } else if (!document.hidden && !raf) {
+        draw();
+      }
+    });
+  }
+}
 
 /* ── Contact form: mailto fallback ───────────────
    Opens the user's email client pre-filled with

@@ -44,6 +44,7 @@
       <div class="hero__bg-grid" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <canvas class="hero__webgl" id="heroWebgl" aria-hidden="true"></canvas>
 
       <div class="container hero__content">
         <div class="hero__badge reveal">
@@ -141,7 +142,7 @@
 
         <div class="services__grid">
 
-          <div class="service-card reveal">
+          <div class="service-card reveal interactive-card">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
@@ -151,7 +152,7 @@
             <p>Visually stunning, responsive websites designed from scratch to reflect your brand identity and captivate visitors.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal interactive-card">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
@@ -161,7 +162,7 @@
             <p>Professional multi-page websites that establish credibility, showcase your services, and convert visitors into customers.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal interactive-card">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/>
@@ -171,7 +172,7 @@
             <p>High-converting, focused landing pages built to promote your product, service, or event and drive real results.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal interactive-card">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -196,25 +197,25 @@
 
         <div class="why-us__grid">
 
-          <div class="why-card reveal">
+          <div class="why-card reveal interactive-card">
             <div class="why-card__num">01</div>
             <h3>Affordable for Local Businesses</h3>
             <p>I understand the budget reality of small local businesses. My rates are fair, transparent, and designed to give you maximum value.</p>
           </div>
 
-          <div class="why-card reveal">
+          <div class="why-card reveal interactive-card">
             <div class="why-card__num">02</div>
             <h3>100% Custom — No Templates</h3>
             <p>Every website is hand-coded from the ground up. No drag-and-drop builders, no recycled themes — just clean, original work.</p>
           </div>
 
-          <div class="why-card reveal">
+          <div class="why-card reveal interactive-card">
             <div class="why-card__num">03</div>
             <h3>Fast Delivery</h3>
             <p>I work efficiently and communicate clearly throughout the process so you get your website up and running without the long wait.</p>
           </div>
 
-          <div class="why-card reveal">
+          <div class="why-card reveal interactive-card">
             <div class="why-card__num">04</div>
             <h3>Locally Rooted, Globally Minded</h3>
             <p>I’m based in Valencia City, Bukidnon and understand this community. My designs still meet international standards your customers will trust.</p>
@@ -238,7 +239,7 @@
         <div class="portfolio__grid">
 
           <!-- Valencia Brew Café — Live Project -->
-          <div class="portfolio-card portfolio-card--live reveal">
+          <div class="portfolio-card portfolio-card--live reveal interactive-card">
             <a href="portfolio/valencia-brew-cafe/index.html" target="_blank" rel="noopener" class="portfolio-card__link" aria-label="View Valencia Brew Café website">
               <div class="portfolio-card__preview">
                 <div class="pf-preview pf-preview--cafe">
@@ -276,7 +277,7 @@
           </div>
 
           <!-- Bukidnon Highlands Resort — Live Project -->
-          <div class="portfolio-card portfolio-card--live reveal">
+          <div class="portfolio-card portfolio-card--live reveal interactive-card">
             <a href="portfolio/bukidnon-highlands-resort/index.html" target="_blank" rel="noopener" class="portfolio-card__link" aria-label="View Bukidnon Highlands Resort website">
               <div class="portfolio-card__preview">
                 <div class="pf-preview pf-preview--resort">
@@ -314,7 +315,7 @@
           </div>
 
           <!-- Best Work Solution — Live Project -->
-          <div class="portfolio-card portfolio-card--live reveal">
+          <div class="portfolio-card portfolio-card--live reveal interactive-card">
             <a href="portfolio/bestworksolution/index.html" target="_blank" rel="noopener" class="portfolio-card__link" aria-label="View Best Work Solution website">
               <div class="portfolio-card__preview">
                 <div class="pf-preview pf-preview--cafe">
@@ -359,6 +360,69 @@
       </div>
     </section>
 
+    <!-- ═════════════════════════ CLIENT PORTAL PREVIEW ═══════════════════════ -->
+    <section class="section portal-preview" id="portal-preview">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow reveal">Client Experience</p>
+          <h2 class="section__title reveal">Sample Client Dashboard</h2>
+          <p class="section__sub reveal">
+            A transparent, premium workflow your business can expect from kickoff to launch.
+          </p>
+        </div>
+
+        <div class="portal-preview__panel reveal interactive-card">
+          <aside class="portal-preview__timeline">
+            <h3>Project Timeline</h3>
+            <ul>
+              <li class="is-done"><span>Week 1</span> Discovery + strategy call</li>
+              <li class="is-done"><span>Week 2</span> Wireframes + design direction</li>
+              <li class="is-active"><span>Week 3</span> Homepage build + review</li>
+              <li><span>Week 4</span> Inner pages + integrations</li>
+              <li><span>Week 5</span> QA, launch prep, and handoff</li>
+            </ul>
+          </aside>
+
+          <div class="portal-preview__main">
+            <div class="portal-preview__toolbar">
+              <button class="portal-tab is-active" data-portal-tab="revisions" type="button">Revisions</button>
+              <button class="portal-tab" data-portal-tab="assets" type="button">Assets</button>
+              <button class="portal-tab" data-portal-tab="launch" type="button">Launch Checklist</button>
+            </div>
+
+            <div class="portal-tab-panel is-active" data-portal-panel="revisions">
+              <h4>Revision Queue</h4>
+              <ul>
+                <li><strong>Homepage hero</strong> - Update headline emphasis to services outcomes.</li>
+                <li><strong>Services section</strong> - Add one card for ongoing support retainer.</li>
+                <li><strong>Footer CTA</strong> - Link directly to booking form.</li>
+              </ul>
+            </div>
+
+            <div class="portal-tab-panel" data-portal-panel="assets">
+              <h4>Shared Assets</h4>
+              <ul>
+                <li><strong>Brand files</strong> - logo pack (SVG, PNG) uploaded</li>
+                <li><strong>Content docs</strong> - About + Services final copy approved</li>
+                <li><strong>Media library</strong> - 24 optimized images processed</li>
+              </ul>
+            </div>
+
+            <div class="portal-tab-panel" data-portal-panel="launch">
+              <h4>Launch Readiness</h4>
+              <ul>
+                <li>Domain + DNS configured</li>
+                <li>Analytics + search console connected</li>
+                <li>SEO metadata reviewed</li>
+                <li>Performance baseline passed</li>
+                <li>Final client sign-off pending</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ══════════════════════════════ CONTACT ════════════════════════════════ -->
     <section class="section contact" id="contact">
       <div class="contact__bg" aria-hidden="true"></div>
@@ -397,6 +461,13 @@
                   <span class="contact__item-value">Valencia City, Bukidnon, Philippines</span>
                 </div>
               </div>
+            </div>
+
+            <div class="meeting-card reveal interactive-card">
+              <p class="meeting-card__eyebrow">Instant Meeting Booking</p>
+              <h3>Book a free strategy call</h3>
+              <p>Prefer a quick call instead of email? Pick a time slot and I will meet you directly.</p>
+              <a class="btn btn--ghost btn--full" href="https://calendly.com/webneststudiobkdn/30min" target="_blank" rel="noopener">Open Calendly</a>
             </div>
           </div>
 
