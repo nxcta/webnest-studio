@@ -1,0 +1,61 @@
+{
+  "brand": {
+    "name": "WebNest Studio",
+    "location": "Valencia City, Bukidnon, Philippines",
+    "positioning": "A small local web design & development studio that builds clean, modern, hand-coded websites for businesses."
+  },
+  "contact": {
+    "email": "webneststudiobkdn@gmail.com",
+    "best_next_step": "Use the Contact form on the site or email us to get a quote."
+  },
+  "services": [
+    "Website Design (custom UI/UX)",
+    "Business Websites (multi-page)",
+    "Landing Pages (high-converting)",
+    "Maintenance & Support (updates and help after launch)"
+  ],
+  "process": {
+    "typical_steps": [
+      "Quick chat about goals, pages, and style",
+      "Design direction + structure",
+      "Build the site (responsive + fast)",
+      "Review + revisions",
+      "Launch + optional maintenance"
+    ]
+  },
+  "faq": [
+    {
+      "q": "What services do you offer?",
+      "a": "WebNest Studio builds custom websites for businesses: website design, business websites (multi-page), landing pages, and maintenance/support."
+    },
+    {
+      "q": "Where are you based?",
+      "a": "We’re based in Valencia City, Bukidnon, Philippines."
+    },
+    {
+      "q": "Do you use templates or page builders?",
+      "a": "We focus on clean, custom, hand-coded builds (no recycled templates)."
+    },
+    {
+      "q": "How much does a website cost?",
+      "a": "Pricing depends on the number of pages, features, and timeline. Send us your business/project details and we’ll provide a clear quote."
+    },
+    {
+      "q": "How long does it take to build a website?",
+      "a": "Timelines vary by scope (pages and features). If you message us your requirements, we’ll give you an estimated schedule and milestones."
+    },
+    {
+      "q": "How can I contact you?",
+      "a": "You can use the Contact section on this page or email us at webneststudiobkdn@gmail.com."
+    },
+    {
+      "q": "What do you need from me to start?",
+      "a": "A short description of your business, the pages you want, any examples you like, your logo/brand colors (if available), and your target launch date."
+    }
+  ],
+  "safety": {
+    "scope": "This chatbot is a simple site guide for WebNest Studio. It should answer only about the studio, services, projects shown here, and contact details.",
+    "privacy_note": "Visitors should not share passwords, API keys, or other sensitive personal information."
+  }
+}
+

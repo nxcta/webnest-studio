@@ -147,3 +147,121 @@ function showFormFeedback(text, type) {
   contactForm.appendChild(el);
   setTimeout(() => el.remove(), 5000);
 }
+
+/* ── AI Chatbot (Portfolio Site Guide) ─────────── */
+(function initChatbot() {
+  const fab = document.getElementById('chatbotFab');
+  const panel = document.getElementById('chatbotPanel');
+  const closeBtn = document.getElementById('chatbotClose');
+  const messagesEl = document.getElementById('chatbotMessages');
+  const chipsEl = document.getElementById('chatbotChips');
+  const form = document.getElementById('chatbotForm');
+  const input = document.getElementById('chatbotInput');
+  const sendBtn = document.getElementById('chatbotSend');
+
+  if (!fab || !panel || !closeBtn || !messagesEl || !chipsEl || !form || !input || !sendBtn) return;
+
+  let isOpen = false;
+  let isBusy = false;
+  let hasWelcomed = false;
+
+  const suggested = [
+    'What services do you offer?',
+    'How much does a website cost?',
+    'How long does it take to build a website?',
+    'How can I contact you?',
+  ];
+
+  function renderChips() {
+    chipsEl.innerHTML = '';
+    suggested.forEach(text => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'chatbot__chip';
+      btn.textContent = text;
+      btn.addEventListener('click', () => {
+        input.value = text;
+        input.focus();
+      });
+      chipsEl.appendChild(btn);
+    });
+  }
+
+  function appendMessage(role, text) {
+    const msg = document.createElement('div');
+    msg.className = 'chatbot__msg ' + (role === 'user' ? 'chatbot__msg--user' : 'chatbot__msg--bot');
+    msg.textContent = text;
+    messagesEl.appendChild(msg);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return msg;
+  }
+
+  function setOpen(next) {
+    isOpen = next;
+    fab.setAttribute('aria-expanded', String(isOpen));
+    panel.hidden = !isOpen;
+    if (isOpen) {
+      renderChips();
+      if (!hasWelcomed) {
+        hasWelcomed = true;
+        appendMessage('bot', 'Hi! I’m the WebNest site guide. Ask me about services, pricing, timelines, or how to contact us.');
+      }
+      setTimeout(() => input.focus(), 0);
+    }
+  }
+
+  function setBusy(next) {
+    isBusy = next;
+    input.disabled = isBusy;
+    sendBtn.disabled = isBusy;
+  }
+
+  async function sendMessage(text) {
+    const trimmed = String(text || '').trim();
+    if (!trimmed || isBusy) return;
+
+    appendMessage('user', trimmed);
+    input.value = '';
+    setBusy(true);
+
+    const typing = appendMessage('bot', 'Thinking…');
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: trimmed }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const msg =
+          res.status === 429 ? 'Too many messages too fast. Please wait a bit and try again.' :
+          (data && data.error) ? data.error :
+          'Something went wrong. Please try again in a moment.';
+        typing.textContent = msg;
+        return;
+      }
+
+      typing.textContent = (data && data.reply) ? data.reply : 'Sorry—no response was returned.';
+    } catch (err) {
+      typing.textContent = 'Network error. Please check your connection and try again.';
+    } finally {
+      setBusy(false);
+      input.focus();
+    }
+  }
+
+  fab.addEventListener('click', () => setOpen(!isOpen));
+  closeBtn.addEventListener('click', () => setOpen(false));
+
+  document.addEventListener('keydown', (e) => {
+    if (!isOpen) return;
+    if (e.key === 'Escape') setOpen(false);
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    sendMessage(input.value);
+  });
+})();

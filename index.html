@@ -439,6 +439,37 @@
     </div>
   </footer>
 
+  <!-- ════════════════════════════════ AI CHATBOT ═══════════════════════════════ -->
+  <div class="chatbot" aria-live="polite">
+    <button class="chatbot__fab" id="chatbotFab" type="button" aria-haspopup="dialog" aria-controls="chatbotPanel" aria-expanded="false">
+      <span class="chatbot__fab-dot" aria-hidden="true"></span>
+      <span class="chatbot__fab-label">Ask us</span>
+    </button>
+
+    <section class="chatbot__panel" id="chatbotPanel" role="dialog" aria-modal="false" aria-labelledby="chatbotTitle" hidden>
+      <header class="chatbot__header">
+        <div class="chatbot__title-wrap">
+          <p class="chatbot__eyebrow">WebNest Guide</p>
+          <h3 class="chatbot__title" id="chatbotTitle">Ask about our services</h3>
+        </div>
+        <button class="chatbot__close" id="chatbotClose" type="button" aria-label="Close chat">
+          <span aria-hidden="true">×</span>
+        </button>
+      </header>
+
+      <div class="chatbot__body">
+        <div class="chatbot__messages" id="chatbotMessages" aria-label="Chat messages"></div>
+        <div class="chatbot__chips" id="chatbotChips" aria-label="Suggested questions"></div>
+      </div>
+
+      <form class="chatbot__composer" id="chatbotForm">
+        <input class="chatbot__input" id="chatbotInput" name="message" type="text" placeholder="Ask: pricing, timeline, what you build..." autocomplete="off" maxlength="400" required />
+        <button class="chatbot__send" id="chatbotSend" type="submit">Send</button>
+      </form>
+      <p class="chatbot__fineprint">Free site guide. Please don’t share sensitive info.</p>
+    </section>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>
