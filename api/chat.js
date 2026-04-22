@@ -161,11 +161,11 @@ module.exports = async function handler(req, res) {
         input: [
           {
             role: 'system',
-            content: [{ type: 'text', text: sys }],
+            content: [{ type: 'input_text', text: sys }],
           },
           {
             role: 'user',
-            content: [{ type: 'text', text: message }],
+            content: [{ type: 'input_text', text: message }],
           },
         ],
       }),
