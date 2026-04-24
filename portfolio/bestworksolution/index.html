@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Best Work Solution | Elite Virtual Assistant Agency</title>
 <meta name="description" content="Best Work Solution provides elite virtual assistant services. Hire top-tier remote professionals today."/>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' https://file.garden data: blob:; connect-src 'self' https://api.emailjs.com;"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -884,13 +883,24 @@ function runWipe(cb){
 }
 
 function showMainSite(){
-  document.getElementById('page-landing').style.display='none';
-  wipeCanvas.style.display='none';
+  const landing=document.getElementById('page-landing');
   const pm=document.getElementById('page-main');
+  landing.style.opacity='0';
+  landing.style.pointerEvents='none';
   pm.style.display='block';
+  pm.style.opacity='0';
+  pm.style.transform='translateY(0)';
   document.body.style.overflow='auto';
-  setTimeout(()=>pm.classList.add('visible'),50);
+  wipeCanvas.style.display='none';
   wipeRunning=false;
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      pm.style.transition='opacity 0.6s ease';
+      pm.style.opacity='1';
+      pm.classList.add('visible');
+      setTimeout(()=>{ landing.style.display='none'; },400);
+    });
+  });
 }
 
 document.getElementById('enterBtn').addEventListener('click',()=>{
@@ -967,6 +977,17 @@ backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}))
 document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
 document.getElementById('mobileClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
 function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
+
+// Replace inline onclick on FAQ with event delegation
+document.querySelectorAll('.faq-question').forEach(btn=>{
+  btn.removeAttribute('onclick');
+  btn.addEventListener('click',function(){toggleFaq(this);});
+});
+// Replace inline onclick on mobile menu links
+document.querySelectorAll('.mobile-menu a').forEach(a=>{
+  a.removeAttribute('onclick');
+  a.addEventListener('click',closeMobile);
+});
 
 /* ══════════════════════════════════════
    SCROLL REVEAL
